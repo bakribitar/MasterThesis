@@ -1,0 +1,51 @@
+\RequirePackage[l2tabu,orthodox]{nag}
+
+\documentclass[headsepline,footsepline,footinclude=false,oneside,fontsize=11pt,paper=a4,listof=totoc,bibliography=totoc]{scrbook} % one-sided
+
+\input{settings}
+
+% TODO: change thesis information
+\newcommand*{\getUniversity}{Technische Universität München}
+\newcommand*{\getFaculty}{Department of Informatics}
+\newcommand*{\getTitle}{Vein Viewing System Using Hardware Extension Attached To Smartphones}
+\newcommand*{\getTitleGer}{Venenbeobachtungssystem mit Hardware-Erweiterung für Smartphones}
+\newcommand*{\getAuthor}{Bakri Bitar}
+\newcommand*{\getDoctype}{Master's Thesis in Informatics}
+\newcommand*{\getSupervisor}{Prof. Dr. Uwe Baumgarten}
+\newcommand*{\getAdvisor}{Prof. Dr. Uwe Baumgarten}
+\newcommand*{\getSubmissionDate}{15.11.2018}
+\newcommand*{\getSubmissionLocation}{Munich}
+
+\begin{document}
+
+% Set page numbering to avoid "destination with the same identifier has been already used" warning for cover page.
+% (see https://en.wikibooks.org/wiki/LaTeX/Hyperlinks#Problems_with_Links_and_Pages).
+\pagenumbering{alph}
+\input{pages/cover}
+
+\frontmatter{}
+
+\input{pages/title}
+\input{pages/disclaimer}
+\input{pages/acknowledgements}
+\input{pages/abbreviations}
+\input{pages/abstract}
+\microtypesetup{protrusion=false}
+\tableofcontents{}
+\microtypesetup{protrusion=true}
+
+\mainmatter{}
+
+\input{chapters/01_introduction}
+% TODO: add more chapters here
+
+\appendix{}
+
+\microtypesetup{protrusion=false}
+\listoffigures{}
+\listoftables{}
+\microtypesetup{protrusion=true}
+\nocite{*}
+\printbibliography
+
+\end{document}

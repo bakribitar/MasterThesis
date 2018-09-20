@@ -1,0 +1,6 @@
+/build/*
+!/build/main.pdf
+/logos/*.pdf
+
+*.driveupload
+build/main\.pdf
