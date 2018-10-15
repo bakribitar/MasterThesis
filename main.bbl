@@ -1,0 +1,217 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{study1}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=83f04de2b3f43f04a03d6e01b5ada7d9}{%
+           family={Anagha\bibnamedelimb B.\bibnamedelimi Bawase},
+           familyi={A\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Pro.\bibnamedelimi Dr.\bibnamedelimi Mrs.\bibnamedelimi S.\bibnamedelimi D.\bibnamedelimi Apte},
+           giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {IOSR Journal of Electronics}%
+        {Communication Engineering (IOSR-JECE)}%
+      }
+      \strng{namehash}{83f04de2b3f43f04a03d6e01b5ada7d9}
+      \strng{fullhash}{83f04de2b3f43f04a03d6e01b5ada7d9}
+      \strng{bibnamehash}{83f04de2b3f43f04a03d6e01b5ada7d9}
+      \strng{authorbibnamehash}{83f04de2b3f43f04a03d6e01b5ada7d9}
+      \strng{authornamehash}{83f04de2b3f43f04a03d6e01b5ada7d9}
+      \strng{authorfullhash}{83f04de2b3f43f04a03d6e01b5ada7d9}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Infrared Hand Vein Detection System}
+      \field{year}{2015}
+    \endentry
+    \entry{comlicationsVeni1}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=b46029357dd7fce6dba6b5122eba709a}{%
+           family={Campbell},
+           familyi={C\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Prof. Nurse London Engl.}%
+      }
+      \strng{namehash}{b46029357dd7fce6dba6b5122eba709a}
+      \strng{fullhash}{b46029357dd7fce6dba6b5122eba709a}
+      \strng{bibnamehash}{b46029357dd7fce6dba6b5122eba709a}
+      \strng{authorbibnamehash}{b46029357dd7fce6dba6b5122eba709a}
+      \strng{authornamehash}{b46029357dd7fce6dba6b5122eba709a}
+      \strng{authorfullhash}{b46029357dd7fce6dba6b5122eba709a}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Intravenous cannulation: potential complications}
+      \field{year}{1997}
+    \endentry
+    \entry{clinicalPredi}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=2a6e34324240782ce355611481f26273}{%
+           family={Carr},
+           familyi={C\bibinitperiod},
+           given={P.\bibnamedelimi J.\bibnamedelimi et\bibnamedelima al.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim e\bibinitperiod\bibinitdelim a\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {BMJ Open}%
+      }
+      \strng{namehash}{2a6e34324240782ce355611481f26273}
+      \strng{fullhash}{2a6e34324240782ce355611481f26273}
+      \strng{bibnamehash}{2a6e34324240782ce355611481f26273}
+      \strng{authorbibnamehash}{2a6e34324240782ce355611481f26273}
+      \strng{authornamehash}{2a6e34324240782ce355611481f26273}
+      \strng{authorfullhash}{2a6e34324240782ce355611481f26273}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Development of a clinical prediction rule to improve peripheral intravenous cannulae first attempt success in the emergency department and reduce post insertion failure rates: the Vascular Access Decisions in the Emergency Room (VADER) study protocol}
+      \field{year}{2016}
+    \endentry
+    \entry{roboVenipuncture}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=a13aa03f64107a61cf4f0df78c983557}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Alvin\bibnamedelima I.},
+           giveni={A\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Rutgers, The State University of New Jersey}%
+      }
+      \strng{namehash}{a13aa03f64107a61cf4f0df78c983557}
+      \strng{fullhash}{a13aa03f64107a61cf4f0df78c983557}
+      \strng{bibnamehash}{a13aa03f64107a61cf4f0df78c983557}
+      \strng{authorbibnamehash}{a13aa03f64107a61cf4f0df78c983557}
+      \strng{authornamehash}{a13aa03f64107a61cf4f0df78c983557}
+      \strng{authorfullhash}{a13aa03f64107a61cf4f0df78c983557}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Image-Guided Robotics for Autonomous Venipuncture}
+      \field{year}{October 2016}
+    \endentry
+    \entry{comlicationsVeni}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=644cce6e08558a7a9f9051fc18ea17fd}{%
+           family={Galena},
+           familyi={G\bibinitperiod},
+           given={H.\bibnamedelimi J.},
+           giveni={H\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {J. Fam. Pract}%
+      }
+      \strng{namehash}{644cce6e08558a7a9f9051fc18ea17fd}
+      \strng{fullhash}{644cce6e08558a7a9f9051fc18ea17fd}
+      \strng{bibnamehash}{644cce6e08558a7a9f9051fc18ea17fd}
+      \strng{authorbibnamehash}{644cce6e08558a7a9f9051fc18ea17fd}
+      \strng{authornamehash}{644cce6e08558a7a9f9051fc18ea17fd}
+      \strng{authorfullhash}{644cce6e08558a7a9f9051fc18ea17fd}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Complications Occurring From Diagnostic Venipuncture}
+      \field{year}{1992}
+    \endentry
+    \entry{comlicationsVeni2}{book}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=e50694d8fe7a921b030fe3d2f3315095}{%
+           family={Mbamalu},
+           familyi={M\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=97a26a0931a0abd101c0c62f7eafb5a0}{%
+           family={Banerjee},
+           familyi={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Postgrad. Med. J.}%
+      }
+      \strng{namehash}{5371dc934d4d325bb038ac070e5568f7}
+      \strng{fullhash}{5371dc934d4d325bb038ac070e5568f7}
+      \strng{bibnamehash}{5371dc934d4d325bb038ac070e5568f7}
+      \strng{authorbibnamehash}{5371dc934d4d325bb038ac070e5568f7}
+      \strng{authornamehash}{5371dc934d4d325bb038ac070e5568f7}
+      \strng{authorfullhash}{5371dc934d4d325bb038ac070e5568f7}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A. Methods of obtaining peripheral venous access in difficult situations}
+      \field{year}{1999}
+    \endentry
+    \entry{study2}{book}{}
+      \list{publisher}{2}{%
+        {International Journal of Scientific}%
+        {Engineering Research, Volume 6, Issue 12}%
+      }
+      \field{sortinit}{V}
+      \field{sortinithash}{75dd7385c90b2252c3ae853a80ca853b}
+      \field{labeltitlesource}{title}
+      \field{title}{Vein Detection System using Infrared Light}
+      \field{year}{December-2015}
+      \warn{\item Name "Mayur Wadhwani, Abhinandan Deepak Sharma, Aditi Pillai, Nikita Pisal, Dr. Mita Bhowmick" has too many commas: skipping name}
+    \endentry
+    \entry{electromagnetic}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=ca0025ce0246990f12556ffebc41a142}{%
+           family={Wendell\bibnamedelimb T.\bibnamedelimi Hill},
+           familyi={W\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim H\bibinitperiod},
+           given={III},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {WILEY-VCH Verlag GmbH}%
+        {Co. KGaA, Weinheim}%
+      }
+      \strng{namehash}{ca0025ce0246990f12556ffebc41a142}
+      \strng{fullhash}{ca0025ce0246990f12556ffebc41a142}
+      \strng{bibnamehash}{ca0025ce0246990f12556ffebc41a142}
+      \strng{authorbibnamehash}{ca0025ce0246990f12556ffebc41a142}
+      \strng{authornamehash}{ca0025ce0246990f12556ffebc41a142}
+      \strng{authorfullhash}{ca0025ce0246990f12556ffebc41a142}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Electromagnetic Radiation}
+      \field{year}{2009}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

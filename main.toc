@@ -1,0 +1,56 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {american}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Acknowledgments}{iii}{Doc-Start}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Abbreviations and Acronyms}{iv}{chapter*.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Abstract}{v}{chapter*.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}General Overview}{1}{section.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Complications Associated With Venepuncture}{2}{section.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Pain}{2}{section*.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Failure to Access The Vein}{2}{section*.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Hematoma}{2}{section*.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Unintended Arterial Puncture}{2}{section*.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Peripheral Nerve Damage}{3}{section*.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Phlebitis}{3}{section*.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3}Previous Findings}{3}{section.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.1}Ultrasound vs. Near-Infrared Imaging}{4}{subsection.1.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Ultrasound Imaging}{4}{section*.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Near-Infrared Imaging}{4}{section*.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Conclusion}{5}{section*.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.2}Studies and Products}{6}{subsection.1.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Studies}{6}{section*.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Dedicated Devices}{6}{section*.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline USB NIR Cameras}{6}{section*.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline NIR Transilluminators}{6}{section*.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Skin- and Blood-Light Interaction}{7}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Section}{7}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.1}Subsection}{7}{subsection.2.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline List of Figures}{9}{chapter*.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline List of Tables}{10}{chapter*.22}
