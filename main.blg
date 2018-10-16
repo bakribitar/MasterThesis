@@ -1,19 +1,19 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'main.blg'
-[28] biber-MSWIN64:313> INFO - === 
-[51] Biber.pm:371> INFO - Reading 'main.bcf'
-[133] Biber.pm:854> INFO - Using all citekeys in bib section 0
-[146] Biber.pm:3976> INFO - Processing section 0
-[159] Biber.pm:4136> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
-[162] bibtex.pm:1500> INFO - LaTeX decoding ...
-[172] bibtex.pm:1316> INFO - Found BibTeX data source 'bibliography.bib'
-[176] Utils.pm:193> WARN - year field 'October 2016' in entry 'roboVenipuncture' is not an integer - this will probably not sort properly.
-[183] Utils.pm:193> WARN - year field 'December-2015' in entry 'study2' is not an integer - this will probably not sort properly.
-[184] Utils.pm:193> WARN - Name "Mayur Wadhwani, Abhinandan Deepak Sharma, Aditi Pillai, Nikita Pisal, Dr. Mita Bhowmick" has too many commas: skipping name
-[212] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[212] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[212] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[212] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
-[220] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[223] bbl.pm:720> INFO - Output to main.bbl
-[224] Biber.pm:110> INFO - WARNINGS: 3
+[29] biber-MSWIN64:313> INFO - === 
+[52] Biber.pm:371> INFO - Reading 'main.bcf'
+[135] Biber.pm:854> INFO - Using all citekeys in bib section 0
+[147] Biber.pm:3976> INFO - Processing section 0
+[161] Biber.pm:4136> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
+[166] bibtex.pm:1500> INFO - LaTeX decoding ...
+[180] bibtex.pm:1316> INFO - Found BibTeX data source 'bibliography.bib'
+[188] Utils.pm:193> WARN - year field 'October 2016' in entry 'roboVenipuncture' is not an integer - this will probably not sort properly.
+[203] Utils.pm:193> WARN - year field 'December-2015' in entry 'study2' is not an integer - this will probably not sort properly.
+[205] Utils.pm:193> WARN - Name "Mayur Wadhwani, Abhinandan Deepak Sharma, Aditi Pillai, Nikita Pisal, Dr. Mita Bhowmick" has too many commas: skipping name
+[250] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[250] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[251] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[251] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
+[265] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[271] bbl.pm:720> INFO - Output to main.bbl
+[272] Biber.pm:110> INFO - WARNINGS: 3

@@ -45,6 +45,88 @@
       \field{title}{Infrared Hand Vein Detection System}
       \field{year}{2015}
     \endentry
+    \entry{skin2}{book}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=ee3930daa9eca4faec4d57223eb0cc73}{%
+           family={Baranoski},
+           familyi={B\bibinitperiod},
+           given={Gladimir\bibnamedelimb V.\bibnamedelimi G.},
+           giveni={G\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=6bd02a02c1f317b69d454b727483a225}{%
+           family={Krishnaswamy},
+           familyi={K\bibinitperiod},
+           given={Aravind},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {RITA, Volume XI, Numero}%
+      }
+      \strng{namehash}{007cf42f3e77615d3abd53626530dca7}
+      \strng{fullhash}{007cf42f3e77615d3abd53626530dca7}
+      \strng{bibnamehash}{007cf42f3e77615d3abd53626530dca7}
+      \strng{authorbibnamehash}{007cf42f3e77615d3abd53626530dca7}
+      \strng{authornamehash}{007cf42f3e77615d3abd53626530dca7}
+      \strng{authorfullhash}{007cf42f3e77615d3abd53626530dca7}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{An Introduction to Light Interaction with Human Skin}
+      \field{year}{2004}
+    \endentry
+    \entry{skin1}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=8f9c47772fa2a09e02ca7c7580d761f4}{%
+           family={Baron},
+           familyi={B\bibinitperiod},
+           given={Elma\bibnamedelima D.},
+           giveni={E\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Dordrecht Heidelberg London New York}%
+      }
+      \strng{namehash}{8f9c47772fa2a09e02ca7c7580d761f4}
+      \strng{fullhash}{8f9c47772fa2a09e02ca7c7580d761f4}
+      \strng{bibnamehash}{8f9c47772fa2a09e02ca7c7580d761f4}
+      \strng{authorbibnamehash}{8f9c47772fa2a09e02ca7c7580d761f4}
+      \strng{authornamehash}{8f9c47772fa2a09e02ca7c7580d761f4}
+      \strng{authorfullhash}{8f9c47772fa2a09e02ca7c7580d761f4}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Light-Based Therapies for Skin of Color}
+      \field{year}{2009}
+    \endentry
+    \entry{skin}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=f6a1c473188805284a870e15e069446d}{%
+           family={Benítez\bibnamedelima JM},
+           familyi={B\bibinitperiod\bibinitdelim J\bibinitperiod},
+           given={Montáns\bibnamedelima FJ.},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {Computers}%
+        {Structures}%
+      }
+      \strng{namehash}{f6a1c473188805284a870e15e069446d}
+      \strng{fullhash}{f6a1c473188805284a870e15e069446d}
+      \strng{bibnamehash}{f6a1c473188805284a870e15e069446d}
+      \strng{authorbibnamehash}{f6a1c473188805284a870e15e069446d}
+      \strng{authornamehash}{f6a1c473188805284a870e15e069446d}
+      \strng{authorfullhash}{f6a1c473188805284a870e15e069446d}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The mechanical behavior of skin: Structures and models for the finite element analysis.}
+      \field{year}{2017}
+    \endentry
     \entry{comlicationsVeni1}{book}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=b46029357dd7fce6dba6b5122eba709a}{%
@@ -120,6 +202,37 @@
       \field{title}{Image-Guided Robotics for Autonomous Venipuncture}
       \field{year}{October 2016}
     \endentry
+    \entry{opticsOfBlood1}{book}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=9014b0d6a34d5b513f9badca68bc35b8}{%
+           family={FRIEBEL},
+           familyi={F\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=d873fb64c1658e65b0f865168098c173}{%
+           family={HELFMANN},
+           familyi={H\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {J. Biomed. Opt}%
+      }
+      \strng{namehash}{20fec60f24d9616a173694a0e760dbd1}
+      \strng{fullhash}{20fec60f24d9616a173694a0e760dbd1}
+      \strng{bibnamehash}{20fec60f24d9616a173694a0e760dbd1}
+      \strng{authorbibnamehash}{20fec60f24d9616a173694a0e760dbd1}
+      \strng{authornamehash}{20fec60f24d9616a173694a0e760dbd1}
+      \strng{authorfullhash}{20fec60f24d9616a173694a0e760dbd1}
+      \field{sortinit}{F}
+      \field{sortinithash}{669c706c6f1fbf3b5a83d26f1d9e9e72}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Optical properties of platelets and blood plasma and their influence on the optical behavior of whole blood in the visible to near infrared wavelength range}
+      \field{year}{2007}
+    \endentry
     \entry{comlicationsVeni}{book}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=644cce6e08558a7a9f9051fc18ea17fd}{%
@@ -173,6 +286,55 @@
       \field{title}{A. Methods of obtaining peripheral venous access in difficult situations}
       \field{year}{1999}
     \endentry
+    \entry{blood}{book}{}
+      \name{author}{5}{}{%
+        {{uniquename=0,uniquepart=base,hash=b65b82e68f4cb5eeb27d2ebfc494c19a}{%
+           family={Roggan},
+           familyi={R\bibinitperiod},
+           given={Andre´},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=e097cd0eebf460854df60c343b27cf6d}{%
+           family={Friebel},
+           familyi={F\bibinitperiod},
+           given={Moritz},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=d4fd4ad3a63b5458946ca14be71d3379}{%
+           family={Dörschel},
+           familyi={D\bibinitperiod},
+           given={Klaus},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=a0970730f72678fa5cb30603225ce049}{%
+           family={Hahn},
+           familyi={H\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=823a540da89d7aaf4404cc3d0e393f2d}{%
+           family={Müller},
+           familyi={M\bibinitperiod},
+           given={Gerhard},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {JOURNAL OF BIOMEDICAL OPTICS 4(1), 36–46}%
+      }
+      \strng{namehash}{e1dbba5c4b8420429ac304f821ae1cf1}
+      \strng{fullhash}{d739f1002e6845e6306e7a73cc652c11}
+      \strng{bibnamehash}{d739f1002e6845e6306e7a73cc652c11}
+      \strng{authorbibnamehash}{d739f1002e6845e6306e7a73cc652c11}
+      \strng{authornamehash}{e1dbba5c4b8420429ac304f821ae1cf1}
+      \strng{authorfullhash}{d739f1002e6845e6306e7a73cc652c11}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{OPTICAL PROPERTIES OF CIRCULATING HUMAN BLOOD IN THE WAVELENGTH RANGE 400–2500 NM}
+      \field{year}{1999}
+    \endentry
     \entry{study2}{book}{}
       \list{publisher}{2}{%
         {International Journal of Scientific}%
@@ -210,6 +372,34 @@
       \field{labeltitlesource}{title}
       \field{title}{Electromagnetic Radiation}
       \field{year}{2009}
+    \endentry
+    \entry{opticsOfBlood}{book}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=655e6378ee3a6f72b76dbcaecdd402ee}{%
+           family={YAROSLAVSKY},
+           familyi={Y\bibinitperiod}}}%
+        {{uniquename=0,uniquepart=base,hash=4f77e2c8df204975cd11396d206476c0}{%
+           family={A.\bibnamedelimi N.},
+           familyi={A\bibinitperiod\bibinitdelim N\bibinitperiod},
+           given={PRIEZZHEV},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {V. V. Tuchin, Ed., SPIE-Press}%
+      }
+      \strng{namehash}{a5cd41dc7287029c0f651bdb7164d63a}
+      \strng{fullhash}{a5cd41dc7287029c0f651bdb7164d63a}
+      \strng{bibnamehash}{a5cd41dc7287029c0f651bdb7164d63a}
+      \strng{authorbibnamehash}{a5cd41dc7287029c0f651bdb7164d63a}
+      \strng{authornamehash}{a5cd41dc7287029c0f651bdb7164d63a}
+      \strng{authorfullhash}{a5cd41dc7287029c0f651bdb7164d63a}
+      \field{sortinit}{Y}
+      \field{sortinithash}{b8d711a035f7be9840c721c82920477e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Optics of blood}
+      \field{year}{2002}
     \endentry
   \enddatalist
 \endrefsection
