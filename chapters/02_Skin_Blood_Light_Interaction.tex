@@ -47,7 +47,20 @@ The effects of the optical properties of WBCs and platelets on the light scatter
 \subsubsection{Absorption and Scattering Properties of Red Blood Cells in the NIR Spectrum}
 Red blood cells have a thin plasma membrane that encloses mainly a hemoglobin solution. The absorption and scattering of light by the RBCs are two to three orders of magnitude higher than those of the other blood components \parencite{opticsOfBlood1}. The light scattered by a single RBC depends on
 its shape, volume, refractive index and orientation \parencite{opticsOfBlood1}. However the absorption of light by the RBCs is dominated by hemoglobin in its functional, oxygen-binding, forms, namely oxyhemoglobin and deoxyhemoglobin. 
+The  \autoref{fig:blood} below shows a remarkable difference in absorption rates between oxygenated and deoxygenated blood within the wavelength range from 800 to 1150 nm.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{figures/blood.JPG}
+\caption[The absorption spectrum of oxygenated and deoxygenated diluted blood]{The absorption spectrum of oxygenated and deoxygenated diluted blood.}\label{fig:blood}
+\end{figure}
 
 \section{Conclusion: Wavelength Selection}
-to quantify the absorption of light traveling within this solution [69]. It is necessary to take into account, however, that the optical path of
-light traveling within a cell may increase due to multiple reflections at its internal boundary [
+The goal of studying skin- and blood-light interaction is to analyse the absorption and scattering properties in both skin and light and eventually select the optimal wavelength to be used in the hardware extension. In summary, the optimal wavelength is the one that maximizes the skin, specifically the first layer, the epidermis, penetration, as well as the absorption of oxygenated blood, specifically oxyhaemoglobin. Due to the fact the veins carry only oxygenated blood, the selected wavelength should also maximize the difference in absorption rates between oxygenated and deoxygenated blood, which can enhance the contrast and the overall result. It is necessary to take into account the optical path of light traveling from the light source through the first skin layer, the epidermis, and then through the dermis which contains the vessels.  The light is then absorbed by the haemoglobin in RBCs in the oxygenated blood carried through the veins, but reflected/ scattered by the surrounding tissues.
+
+The maximum value of epidermis light penetration is equivalent to the minimum value of light absorption. The graph \autoref{fig:epidermis} shows that the absorption of epidermis decreases with increasing wavelength and has minima at wavelength 1100nm.
+
+The \autoref{fig:blood} demonstrates a maximum absorption value of blood at wavelengths 1500 and 2000 nm but as shown in \autoref{fig:epidermis} the light will not reach the blood or even the dermis at all as of the increased absorption of the epidermis at these wavelengths. Additionally there is no difference in absorption between oxygenated and deoxygenated blood at these wavelengths.
+
+Following from the discussion above, the wavelength in which the light can penetrate the epidermis but gets absorbed by oxyhaemoglobin lays in the range from 800 to 1100 nm, optimally at 1100nm.
