@@ -1,0 +1,27 @@
+% !TeX root = ../main.tex
+% Add the above to each chapter to make compiling the PDF easier in some editors.
+
+\chapter{Hardware Extension}\label{chapter:Hardware Extension}
+
+\section{Components }
+The hardware extension used in this project is composed of basically light transmitters that project the NIR light on the patient’s skin and a light sensor that receives the reflected light from the skin and the underlying vessels and tissues and sends it to an android device connected to it via an on-the-go (OTG) cable.
+
+\subsection{On-The-Go Cable}
+\subsubsection{Background}
+Many of portable devices would benefit from being able to communicate to each other over the USB interface, yet certain aspects of USB make this difficult to achieve such as storage for a large number of device drivers and the ability to source a large current \parencite{otg}.
+The OTG (On The Go) specification as a supplement to the USB 2.0 specification was developed to allow a portable device to take on the role of a limited USB host, without the burden of supporting all the functions of a PC.
+USB OTG is a known USB standard which was designed to allow peripheral attachment to such items as mice, keyboard, memory sticks etc to small, mobile devices.
+
+In addition to being a fully compliant USB 2.0 peripheral, an On-The-Go device must include other features and characteristics including, but not limited to, full-speed operation as a peripheral as well as a host, targeted Peripheral List, session request protocol and means for communicating messages to the user \parencite{otg}.
+
+\subsubsection{Power Providing Specifications}
+When an A-device (hosting device) is providing power on a port, it is required to maintain an output voltage within a specified range on that port, under loads of 0 mA up to the rated per port output of the device’s supply as long as the rated output of the A-device is less than or equal to 100 mA \parencite{otg}.
+
+If the current rating per port of the A-device is greater than 100 mA, then the voltage regulation is required to be between 4.75 V and 5.25 V, and the A-device is required to meet the USB 2.0 specification requirements for power providers \parencite{otg}.
+
+
+\subsection{Light Emitting Diodes}
+\subsubsection{Background}
+Light-emitting diode (LED) is a semiconductor device. It consists of a chip of semiconducting material treated to create a structure called a p–n (positive–negative) junction. When connected to a power source, current flows from the p-side or anode to the n-side or cathode, but not in the reverse direction. Charge carriers (electrons and electron holes) flow into the junction from electrodes. When an electron meets a hole, it returns to a lower energy state and releases the energy in the form of a photon (light)\parencite{led}. The specific wavelength or colour emitted by the LED depends on the semiconductor used. The LED light output power ranges from milliwatts to watts. Their typical light beam divergence is approximately $\pm$120 degrees. However, it can be as small as approximately $\pm$5 degrees for the special constructions \parencite{led} . LEDs are very cheap and popular light sources. They are widely used in photomedicine. LEDs convert electrical energy to light with high efficiency and have a long lifetime. They are available in a wide range of wavelengths from UV to IR, including multicolour and white light LEDs. 
+
+\subsubsection{LED Usage in The Project}

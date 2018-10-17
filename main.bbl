@@ -286,6 +286,16 @@
       \field{title}{A. Methods of obtaining peripheral venous access in difficult situations}
       \field{year}{1999}
     \endentry
+    \entry{otg}{book}{}
+      \list{publisher}{1}{%
+        {USB Implementers Forum, Inc. (USB-IF)}%
+      }
+      \field{sortinit}{O}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labeltitlesource}{title}
+      \field{title}{On-The-Go Supplement to the USB 2.0 Specification}
+      \field{year}{2006}
+    \endentry
     \entry{blood}{book}{}
       \name{author}{5}{}{%
         {{uniquename=0,uniquepart=base,hash=b65b82e68f4cb5eeb27d2ebfc494c19a}{%
@@ -334,6 +344,31 @@
       \field{labeltitlesource}{title}
       \field{title}{OPTICAL PROPERTIES OF CIRCULATING HUMAN BLOOD IN THE WAVELENGTH RANGE 400–2500 NM}
       \field{year}{1999}
+    \endentry
+    \entry{led}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=5d771fdf88df032967e598043cb843c6}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Subhash\bibnamedelima Chandra},
+           giveni={S\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {Laser Spectroscopy}%
+        {Nanomaterials Laboratory Department of Physics University of Allahabad}%
+      }
+      \strng{namehash}{5d771fdf88df032967e598043cb843c6}
+      \strng{fullhash}{5d771fdf88df032967e598043cb843c6}
+      \strng{bibnamehash}{5d771fdf88df032967e598043cb843c6}
+      \strng{authorbibnamehash}{5d771fdf88df032967e598043cb843c6}
+      \strng{authornamehash}{5d771fdf88df032967e598043cb843c6}
+      \strng{authorfullhash}{5d771fdf88df032967e598043cb843c6}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{BASICS OF LIGHT EMITTING DIODES, CHARACTERIZATIONS AND APPLICATIONS}
     \endentry
     \entry{study2}{book}{}
       \list{publisher}{2}{%
