@@ -3,7 +3,7 @@
 
 \chapter{Hardware Extension}\label{chapter:Hardware Extension}
 
-\section{Components }
+\section{Components and Design}
 The hardware extension used in this project is composed of basically light transmitters that project the NIR light on the patient’s skin and a light sensor that receives the reflected light from the skin and the underlying vessels and tissues and sends it to an android device connected to it via an on-the-go (OTG) cable.
 
 \subsection{On-The-Go Cable}
@@ -22,6 +22,70 @@ If the current rating per port of the A-device is greater than 100 mA, then the 
 
 \subsection{Light Emitting Diodes}
 \subsubsection{Background}
-Light-emitting diode (LED) is a semiconductor device. It consists of a chip of semiconducting material treated to create a structure called a p–n (positive–negative) junction. When connected to a power source, current flows from the p-side or anode to the n-side or cathode, but not in the reverse direction. Charge carriers (electrons and electron holes) flow into the junction from electrodes. When an electron meets a hole, it returns to a lower energy state and releases the energy in the form of a photon (light)\parencite{led}. The specific wavelength or colour emitted by the LED depends on the semiconductor used. The LED light output power ranges from milliwatts to watts. Their typical light beam divergence is approximately $\pm$120 degrees. However, it can be as small as approximately $\pm$5 degrees for the special constructions \parencite{led} . LEDs are very cheap and popular light sources. They are widely used in photomedicine. LEDs convert electrical energy to light with high efficiency and have a long lifetime. They are available in a wide range of wavelengths from UV to IR, including multicolour and white light LEDs. 
+Light-emitting diode (LED) is a semiconductor device. It consists of a chip of semiconducting material treated to create a structure called a p–n (positive–negative) junction. When connected to a power source, current flows from the p-side or anode to the n-side or cathode, but not in the reverse direction. Charge carriers (electrons and electron holes) flow into the junction from electrodes. When an electron meets a hole, it returns to a lower energy state and releases the energy in the form of a photon (light)\parencite{led}. The specific wavelength or colour emitted by the LED depends on the semiconductor used. The LED light output power ranges from milliwatts to watts. Their typical light beam divergence is approximately $\pm$120 degrees. However, it can be as small as approximately $\pm$5 degrees for the special constructions \parencite{led}. LEDs are very cheap and popular light sources. They are widely used in photomedicine. LEDs convert electrical energy to light with high efficiency and have a long lifetime. They are available in a wide range of wavelengths from UV to IR, including multicolour and white light LEDs. 
 
 \subsubsection{LED Usage in The Project}
+
+According to the previous chapter, the optimal wavelength should be between 800 and 1100 nm, optimally 1100nm. For prototyping purposes, we used a wavelength of 940 nm as it is more available and cheaper in the market. The light beam divergence was estimated optically without taking it into consideration in the research.
+
+To increase the output light power and distribution, a grid of 8 NIR LEDs was used. Each LED is of type SD-AR512C9, voltage 1.2-1.3V, wavelength 940 nm, angle of radiation 60 degrees and current 40mA, connected on parallel with a resistor for each LED. 
+
+The reason why every LED is connected to one separated resistor and not one resistor for all of them is that, when we use one resistor, we have a current limit for the whole LEDs section. After that it's up to each diode to control the current that goes through it. The problem is that real world diodes don't have same characteristics and therefore there's a danger that one diode will start conducting while others won't, which causes one LED to allow more current to flow than it can handle and burn up, eventually then, all other LEDs are going to overheat and burn up because of extra current flowing through them.
+
+A resistor with 100 \si{\ohm} is typically sufficient. As this value should be slightly higher than the minimum resistor value at which the LED has maximum illumination, this can be calculated by Ohm’s low as follows:
+
+
+\begin{equation}
+R= \frac {(V_s - V_{LED})}{I_{LED}} =  \frac {(5-1.2)}{0.04}=95   \si{\ohm}
+\end{equation}
+
+
+where:
+\begin{itemize}
+  \item $V_S$ is the source voltage, measured in volts ($V$),
+  \item $V_{LED}$ is the voltage drop across the LED, measured in volts ($V$),
+  \item $I_{LED}$ is the current through the LED, measured in Amperes ($A$), and
+  \item $R$ is the resistance, measured in Ohms (\si{\ohm}).
+\end{itemize}
+
+
+To control the illumination of the LEDs so that user can dim them or even turn them off, a stepless variable resistor was added on the whole set of the LEDs so that the current running in the whole LEDs section can be changed and, thus, their brightness. This element is not of much importance because it only adds small value to the overall project, for this reason the resistor's value was estimated based on practical test.
+
+
+\subsection{NIR Camera}
+
+Cameras are just clever light detectors. Through a sensor, different levels of red, green and blue light are detected and converted into a digital signal, creating an image as the one seen by the human eye. However, infrared and ultraviolet light are present in daylight but cannot be seen by humans. Unlike human eyes, camera sensors can detect NIR light. Infrared light can affect the colour reproduction drastically. To make the image more akin to what humans can see, most cameras are fitted with an IR-Cut filter which only allows visible light to pass through, reflecting unwanted infrared. 
+
+For NIR imaging, exactly the other way around is needed, i.e. passing only NIR light and filtering out any other wavelengths of the EM spectrum. So that any reflections caused by visible light from the epidermis can be out filtered and getting only the image that shows where oxyhaemoglobin has absorbed the NIR light and thus, getting a visual representation of the veins structure. Replacing the IR-Cut filter with IR-Pass filter is sufficient to achieve this goal.
+
+We used a  webcam of type Trust Exis with 640*320 resolution, after removing the IR cut filter and installing a 9mm NIR pass filter, theoretically, any normal web camera should work after replacing the filter.
+
+\begin{figure}[H]
+\centering
+\includegraphics{figures/circuit.jpg}
+\caption{The LEDs grid and NIR camera circuit.}\label{fig:circuit}
+\end{figure}
+
+\subsection{Power Consumption, Heat Emission and Device Compatibility}
+
+\subsubsection{Power Consumption}
+Android devices, especially phones, are powered from batteries which are limited in size and therefore capacity. This implies that a correct energy management is essential in any application running on such devices. Particularly, when the application includes a hardware part powered from the phone and thus consumes more energy from the device’s battery. In this case, energy efficiency of the hardware part is crucial to the application usability or even feasibility at all.
+
+When it comes to USB power, including the OTG, there are two device categories: bus-powered and self-powered. Bus-power is one of the many benefits of a USB design. It allows the device to sustain itself without the need for a bulky power supply either internally or externally because the device draws its power from the bus \parencite{usb}.
+There are two classifications for a bus-powered device: high-powered and low powered devices. A low-powered device draws, at most, 100 mA and a high-powered device draws, at most, 500 mA. Anything over 500 mA requires the device to be self-powered \parencite{usb}.
+
+As mentioned in the OTG section, the OTG protocol is fully USB 2.0 compliant and thus, its power providing in the high-powered device mode follows the USB 2.0 specification. Which means OTG cable can provide, at most, 500 mA. Hence, this value is the maximum power consumption limit and cannot be exceeded.
+
+The overall power consumption of the hardware extension can be simply calculated as follows:	Overall Consumption = Consumption of 8 LEDs + Consumption of the NIR camera
+	, where the consumption of:
+\begin{itemize}
+	  \item 8 LEDs = 8 * 40 = 320 mA
+	  \item a normal Web camera ranges between 120 and 175 mA
+\end{itemize}
+Thus the overall consumption is less than 500 mA, one can reduce the LEDs number to 6 in case that the web camera consumes more energy.
+
+
+\subsubsection{Heat Emission}
+
+
+

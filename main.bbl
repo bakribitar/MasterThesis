@@ -286,6 +286,31 @@
       \field{title}{A. Methods of obtaining peripheral venous access in difficult situations}
       \field{year}{1999}
     \endentry
+    \entry{usb}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=037c52bd218743ae43063e4c1774ccbb}{%
+           family={Murphy},
+           familyi={M\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cypress Semiconductor Corporation}%
+      }
+      \strng{namehash}{037c52bd218743ae43063e4c1774ccbb}
+      \strng{fullhash}{037c52bd218743ae43063e4c1774ccbb}
+      \strng{bibnamehash}{037c52bd218743ae43063e4c1774ccbb}
+      \strng{authorbibnamehash}{037c52bd218743ae43063e4c1774ccbb}
+      \strng{authornamehash}{037c52bd218743ae43063e4c1774ccbb}
+      \strng{authorfullhash}{037c52bd218743ae43063e4c1774ccbb}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{USB 101: An Introduction to Universal Serial Bus 2.0}
+      \field{year}{2017}
+    \endentry
     \entry{otg}{book}{}
       \list{publisher}{1}{%
         {USB Implementers Forum, Inc. (USB-IF)}%
