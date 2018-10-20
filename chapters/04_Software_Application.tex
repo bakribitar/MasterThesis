@@ -66,8 +66,9 @@ We used a  webcam of type Trust Exis with 640*320 resolution, after removing the
 \caption{The LEDs grid and NIR camera circuit.}\label{fig:circuit}
 \end{figure}
 
+\subsection{Power Consumption, Heat Emission and Device Compatibility}
 
-\subsection{Power Consumption}
+\subsubsection{Power Consumption}
 Android devices, especially phones, are powered from batteries which are limited in size and therefore capacity. This implies that a correct energy management is essential in any application running on such devices. Particularly, when the application includes a hardware part powered from the phone and thus consumes more energy from the device’s battery. In this case, energy efficiency of the hardware part is crucial to the application usability or even feasibility at all.
 
 When it comes to USB power, including the OTG, there are two device categories: bus-powered and self-powered. Bus-power is one of the many benefits of a USB design. It allows the device to sustain itself without the need for a bulky power supply either internally or externally because the device draws its power from the bus \parencite{usb}.
@@ -84,23 +85,7 @@ The overall power consumption of the hardware extension can be simply calculated
 Thus the overall consumption is less than 500 mA, one can reduce the LEDs number to 6 in case that the web camera consumes more energy.
 
 
-\subsection{Heat Emission and Safety}
-IR light is generally safe. However, its safety must be reconsidered for such specific usages of it. It is unperceived by any of the human senses, unless from a heat stimulus resulting from high intensity.
-In general, IR radiation is classified as nonionizing radiation. Although its energy is deficient for ionizations, it may cause diverse biological effects of thermal origin\parencite{ledEyeSafety}.
-Safety of the NIR light should be taken into consideration from two perspectives: eye safety and skin safety.
-\subsubsection {Skin Safety Assessment}
+\subsubsection{Heat Emission}
 
-The main cause of the potential hazard for NIR light projected on the skin is the heating effect. When NIR light is emitted by an LED without a direct contact, heat is transferred via NIR radiation and absorbed by the skin. However, temperature increase due to the radiated energy has been quantified to be less than 0.5 degrees \parencite{ledSafety}. Which, obviously, can be neglected in this study.
-
-Conducted energy, which is caused by the temperature increase in the semiconductor junction inside the LED, can heat up the skin when there is a direct contact and cause temperature increases of up to 9 degrees for contact durations of 30 mins or more \parencite{ledSafety}.
-
-\subsubsection {Eye Safety Assessment}
-The eye lens focusses the light on the retina. Focused light is stronger in terms of irradiance than non-focused light. Hence, injury potential increases with focusing.
-
-In addition, NIR light initiates a very low, or non, visual stimulus. For example, one can look right into an NIR light source without knowing and the defensive mechanisms that typically shields the eye from excessive irradiation are not activated.
-
-However, LEDs have been regarded safe for eye exposure by a number of studies from a radiated energy perspective \parencite{ledEyeSafe1} \parencite{ledEyeSafe2}.
-So damage by NIR radiation is caused primarily by the overheating of the irradiated tissue, resulting in the destruction of cells. This can cause, for example, a permanent vision handicap \parencite{ledEyeSafe3} if direct and intense beam was aimed to the eye.
-\subsection{Device Compatibility}
 
 
