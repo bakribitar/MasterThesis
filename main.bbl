@@ -195,6 +195,15 @@
       \field{title}{Safety assessment of near infrared light emitting diodes for diffuse optical measurements}
       \field{year}{2004}
     \endentry
+    \entry{camerafi}{book}{}
+      \list{publisher}{1}{%
+        {http://www.camerafi.com/supported-devices}%
+      }
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{labeltitlesource}{title}
+      \field{title}{CameraFi Supported Devices}
+    \endentry
     \entry{comlicationsVeni1}{book}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=b46029357dd7fce6dba6b5122eba709a}{%
@@ -268,7 +277,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Image-Guided Robotics for Autonomous Venipuncture}
-      \field{year}{October 2016}
+      \field{year}{2016}
     \endentry
     \entry{ledEyeSafe2}{book}{}
       \name{author}{1}{}{%
@@ -530,6 +539,42 @@
       \field{labeltitlesource}{title}
       \field{title}{BASICS OF LIGHT EMITTING DIODES, CHARACTERIZATIONS AND APPLICATIONS}
     \endentry
+    \entry{uvcCamera}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=1d2e18d4917b1f06ef8b7a478e98d89d}{%
+           given={t\_saki@serenegiant.com},
+           giveni={t\bibinitperiod},
+           givenun=0,
+           prefix={saki\bibnamedelima t\_saki@serenegiant.com},
+           prefixi={s\bibinitperiod\bibinitdelim t\bibinitperiod},
+           prefixun=0}}%
+      }
+      \list{publisher}{1}{%
+        {https://github.com/saki4510t/UVCCamera}%
+      }
+      \strng{namehash}{1d2e18d4917b1f06ef8b7a478e98d89d}
+      \strng{fullhash}{1d2e18d4917b1f06ef8b7a478e98d89d}
+      \strng{bibnamehash}{1d2e18d4917b1f06ef8b7a478e98d89d}
+      \strng{authorbibnamehash}{1d2e18d4917b1f06ef8b7a478e98d89d}
+      \strng{authornamehash}{1d2e18d4917b1f06ef8b7a478e98d89d}
+      \strng{authorfullhash}{1d2e18d4917b1f06ef8b7a478e98d89d}
+      \field{sortinit}{t}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{UVCCamera}
+      \field{year}{2017}
+    \endentry
+    \entry{uvc}{book}{}
+      \list{publisher}{1}{%
+        {USB Implementers Forum}%
+      }
+      \field{sortinit}{U}
+      \field{sortinithash}{36a2444f5238e0dcf4bb59704df6624d}
+      \field{labeltitlesource}{title}
+      \field{title}{USB Device Class Definition for Video Devices}
+      \field{year}{2005}
+    \endentry
     \entry{study2}{book}{}
       \list{publisher}{2}{%
         {International Journal of Scientific}%
@@ -539,7 +584,7 @@
       \field{sortinithash}{75dd7385c90b2252c3ae853a80ca853b}
       \field{labeltitlesource}{title}
       \field{title}{Vein Detection System using Infrared Light}
-      \field{year}{December-2015}
+      \field{year}{2015}
       \warn{\item Name "Mayur Wadhwani, Abhinandan Deepak Sharma, Aditi Pillai, Nikita Pisal, Dr. Mita Bhowmick" has too many commas: skipping name}
     \endentry
     \entry{ledEyeSafe1}{book}{}
