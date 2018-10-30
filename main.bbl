@@ -195,6 +195,70 @@
       \field{title}{Safety assessment of near infrared light emitting diodes for diffuse optical measurements}
       \field{year}{2004}
     \endentry
+    \entry{openCv}{book}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=a780b2fbd99e4f7ce78d33324e39d4c2}{%
+           family={Bradski},
+           familyi={B\bibinitperiod},
+           given={Gary},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=656736e2b93f260c9619384b02d7cdf4}{%
+           family={Kaehler},
+           familyi={K\bibinitperiod},
+           given={Adrian},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {O’Reilly Media, Inc.}%
+      }
+      \strng{namehash}{28773b192aefb3555440671fe8536f6c}
+      \strng{fullhash}{28773b192aefb3555440671fe8536f6c}
+      \strng{bibnamehash}{28773b192aefb3555440671fe8536f6c}
+      \strng{authorbibnamehash}{28773b192aefb3555440671fe8536f6c}
+      \strng{authornamehash}{28773b192aefb3555440671fe8536f6c}
+      \strng{authorfullhash}{28773b192aefb3555440671fe8536f6c}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Learning OpenCV}
+      \field{year}{2008}
+    \endentry
+    \entry{tatto}{book}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=f52a5bcc7f356b9fd97730f309ba47de}{%
+           family={Bryson},
+           familyi={B\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0,
+           suffix={D.\bibnamedelimi Wright},
+           suffixi={D\bibinitperiod\bibinitdelim W\bibinitperiod},
+           suffixun=0}}%
+        {{uniquename=0,uniquepart=base,hash=0db644b0fdf9cdacc49cb1b4059882bd}{%
+           family={Barker},
+           familyi={B\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Research Group, University of Derby}%
+      }
+      \strng{namehash}{8e1312098e68ff813980c4c257546ef5}
+      \strng{fullhash}{8e1312098e68ff813980c4c257546ef5}
+      \strng{bibnamehash}{8e1312098e68ff813980c4c257546ef5}
+      \strng{authorbibnamehash}{8e1312098e68ff813980c4c257546ef5}
+      \strng{authornamehash}{8e1312098e68ff813980c4c257546ef5}
+      \strng{authorfullhash}{8e1312098e68ff813980c4c257546ef5}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The identification	of tattoo designs under cover-up tattoos using digital infrared photography}
+    \endentry
     \entry{camerafi}{book}{}
       \list{publisher}{1}{%
         {http://www.camerafi.com/supported-devices}%
@@ -402,6 +466,31 @@
       \field{title}{Eye Safety Related to Near Infrared Radiation Exposure to Biometric Devices}
       \field{year}{2010}
     \endentry
+    \entry{openGl}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=744e463df49bded6c243d6ae79c08c41}{%
+           family={Leech},
+           familyi={L\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {The Khronos Group Inc.}%
+      }
+      \strng{namehash}{744e463df49bded6c243d6ae79c08c41}
+      \strng{fullhash}{744e463df49bded6c243d6ae79c08c41}
+      \strng{bibnamehash}{744e463df49bded6c243d6ae79c08c41}
+      \strng{authorbibnamehash}{744e463df49bded6c243d6ae79c08c41}
+      \strng{authornamehash}{744e463df49bded6c243d6ae79c08c41}
+      \strng{authorfullhash}{744e463df49bded6c243d6ae79c08c41}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{OpenGL R ES Version 3.2}
+      \field{year}{2018}
+    \endentry
     \entry{comlicationsVeni2}{book}{}
       \name{author}{2}{}{%
         {{uniquename=0,uniquepart=base,hash=e50694d8fe7a921b030fe3d2f3315095}{%
@@ -464,6 +553,32 @@
       \field{labeltitlesource}{title}
       \field{title}{On-The-Go Supplement to the USB 2.0 Specification}
       \field{year}{2006}
+    \endentry
+    \entry{cpp}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=17766e5dee1a923700283447e00ae0df}{%
+           family={Oualline},
+           familyi={O\bibinitperiod},
+           given={Steve},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {O’Reilly}%
+        {Associates, Inc.}%
+      }
+      \strng{namehash}{17766e5dee1a923700283447e00ae0df}
+      \strng{fullhash}{17766e5dee1a923700283447e00ae0df}
+      \strng{bibnamehash}{17766e5dee1a923700283447e00ae0df}
+      \strng{authorbibnamehash}{17766e5dee1a923700283447e00ae0df}
+      \strng{authornamehash}{17766e5dee1a923700283447e00ae0df}
+      \strng{authorfullhash}{17766e5dee1a923700283447e00ae0df}
+      \field{sortinit}{O}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Practical C++ Programming}
+      \field{year}{1995}
     \endentry
     \entry{blood}{book}{}
       \name{author}{5}{}{%

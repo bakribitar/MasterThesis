@@ -88,6 +88,7 @@ Thus the overall consumption is less than 500 mA, one can reduce the LEDs number
 IR light is generally safe. However, its safety must be reconsidered for such specific usages of it. It is unperceived by any of the human senses, unless from a heat stimulus resulting from high intensity.
 In general, IR radiation is classified as nonionizing radiation. Although its energy is deficient for ionizations, it may cause diverse biological effects of thermal origin\parencite{ledEyeSafety}.
 Safety of the NIR light should be taken into consideration from two perspectives: eye safety and skin safety.
+
 \subsubsection {Skin Safety Assessment}
 
 The main cause of the potential hazard for NIR light projected on the skin is the heating effect. When NIR light is emitted by an LED without a direct contact, heat is transferred via NIR radiation and absorbed by the skin. However, temperature increase due to the radiated energy has been quantified to be less than 0.5 degrees \parencite{ledSafety}. Which, obviously, can be neglected in this study.
@@ -103,9 +104,31 @@ However, LEDs have been regarded safe for eye exposure by a number of studies fr
 So damage by NIR radiation is caused primarily by the overheating of the irradiated tissue, resulting in the destruction of cells. This can cause, for example, a permanent vision handicap \parencite{ledEyeSafe3} if direct and intense beam was aimed to the eye.
 The prototype includes a protective mechanism, so that the user knows that the NIR LEDs should be always kept facing down. An alarm rings if the device is flipped upside down.
 
+
+\subsubsection{Practical Assessments}
+Three practical assessments of the prototype’s temperature increasement and power consumption were performed. The prototype was tested using an old Samsung Galaxy J5 phone. Each assessment was done in the room temperature and for a time duration of 10 minutes and dropped the battery 5\%.
+
+In the first assessment, only the LEDs were left on with full brightness, but the application was not running. It yielded a temperature increase from outside of the device (temperature of one NIR LED) of 3 degrees.
+
+The goal of the second assessment was to test the inner temperature of the prototype. A thermometer was placed inside the prototype. It yielded a temperature increase from inside of the device of 7 degrees which is relatively high.
+
+In the third assessment, the image processing module worked for the whole time period as well as the NIR LEDs in full brightness and the camera. Analogously to the second assessment, a thermometer was also placed inside the prototype. The goal of this assessment is to test the power consumption of the overall system when image processing is on. Result of this assessment was 7 degrees of temperature increasment.
+
+\subsubsection{Conclusion }
+
+\begin{itemize}
+
+\item NIR light is safe for projection on the skin. The main hazard is the heating affect. Which can be neglected in the project setting as the LEDs power is very low. 
+\item NIR light can be considered safe for eyes as well, but it is not recommended to aim any kind of directed light beam directly in the eyes.
+\item As per the practical assessments, power consumption is reasonable. But the prototype heats up relatively on continuous usage, this can be solved by enhancement of the plastic cover or adding a heat sink.
+\item The main power consuming component is the NIR LEDs. Those can be turned off without affecting the imaging quality, given sufficient daylight or at least reflection of it, is available, because the sunlight offers enough amounts of infrared light.
+
+\end{itemize}
+
+
 \subsection{Device Compatibility}
 
-Unfortunately, having an OTG port is not enough to guaranty that UVC camera will work well under Android. UVC camera is a standard class for USB video cameras and it will be explained later in a separated section. For reasons related to hardware and chip compatibility, not all android devices can run UVC cameras. As no official documentation for the UVC is available. 
+Unfortunately, having an OTG port is not enough to guaranty that UVC compliant camera will work well under Android. UVC is a standard class for USB video cameras and it will be explained later in a separated section. For reasons related to hardware and chip compatibility, not all android devices can run UVC compliant cameras. As no official documentation for the UVC is available. 
 
 Moreover, some manufacturers configure their Android image so that devices other than keyboard and mass storage are ignored, and this configuration is hard to detect. 
 
