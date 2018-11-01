@@ -1,17 +1,17 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'main.blg'
-[32] biber-MSWIN64:313> INFO - === 
-[57] Biber.pm:371> INFO - Reading 'main.bcf'
-[145] Biber.pm:854> INFO - Using all citekeys in bib section 0
-[160] Biber.pm:3976> INFO - Processing section 0
-[174] Biber.pm:4136> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
-[180] bibtex.pm:1500> INFO - LaTeX decoding ...
-[207] bibtex.pm:1316> INFO - Found BibTeX data source 'bibliography.bib'
-[224] Utils.pm:193> WARN - Name "Mayur Wadhwani, Abhinandan Deepak Sharma, Aditi Pillai, Nikita Pisal, Dr. Mita Bhowmick" has too many commas: skipping name
-[355] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[355] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[30] biber-MSWIN64:313> INFO - === 
+[55] Biber.pm:371> INFO - Reading 'main.bcf'
+[142] Biber.pm:854> INFO - Using all citekeys in bib section 0
+[156] Biber.pm:3976> INFO - Processing section 0
+[170] Biber.pm:4136> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
+[174] bibtex.pm:1500> INFO - LaTeX decoding ...
+[202] bibtex.pm:1316> INFO - Found BibTeX data source 'bibliography.bib'
+[301] Utils.pm:193> WARN - Name "Mayur Wadhwani, Abhinandan Deepak Sharma, Aditi Pillai, Nikita Pisal, Dr. Mita Bhowmick" has too many commas: skipping name
+[356] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[356] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
 [356] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
 [356] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
-[386] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[401] bbl.pm:720> INFO - Output to main.bbl
-[401] Biber.pm:110> INFO - WARNINGS: 1
+[388] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[404] bbl.pm:720> INFO - Output to main.bbl
+[404] Biber.pm:110> INFO - WARNINGS: 1

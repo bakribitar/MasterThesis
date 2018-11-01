@@ -138,6 +138,31 @@
       \field{title}{Light-Based Therapies for Skin of Color}
       \field{year}{2009}
     \endentry
+    \entry{faceLocal}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=3110caa22b682a3c7f48017d49dccc6b}{%
+           family={Behnke},
+           familyi={B\bibinitperiod},
+           given={Sven},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {University of Bonn}%
+      }
+      \strng{namehash}{3110caa22b682a3c7f48017d49dccc6b}
+      \strng{fullhash}{3110caa22b682a3c7f48017d49dccc6b}
+      \strng{bibnamehash}{3110caa22b682a3c7f48017d49dccc6b}
+      \strng{authorbibnamehash}{3110caa22b682a3c7f48017d49dccc6b}
+      \strng{authornamehash}{3110caa22b682a3c7f48017d49dccc6b}
+      \strng{authorfullhash}{3110caa22b682a3c7f48017d49dccc6b}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Face Localization}
+      \field{year}{2003}
+    \endentry
     \entry{skin}{book}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=f6a1c473188805284a870e15e069446d}{%
@@ -258,6 +283,37 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{The identification	of tattoo designs under cover-up tattoos using digital infrared photography}
+    \endentry
+    \entry{objectLocal}{book}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=0aa4fe6f1eb9f34a6471621ede5ed54b}{%
+           family={Caicedo},
+           familyi={C\bibinitperiod},
+           given={Juan\bibnamedelima C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=ed3e473df095b5791b5a5d837557bff7}{%
+           family={Lazebnik},
+           familyi={L\bibinitperiod},
+           given={Svetlana},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {University of Illinois}%
+        {Konrad Lorenz University}%
+      }
+      \strng{namehash}{bdc4c1a9ea07cd0a4dcd653d4b52fa6a}
+      \strng{fullhash}{bdc4c1a9ea07cd0a4dcd653d4b52fa6a}
+      \strng{bibnamehash}{bdc4c1a9ea07cd0a4dcd653d4b52fa6a}
+      \strng{authorbibnamehash}{bdc4c1a9ea07cd0a4dcd653d4b52fa6a}
+      \strng{authornamehash}{bdc4c1a9ea07cd0a4dcd653d4b52fa6a}
+      \strng{authorfullhash}{bdc4c1a9ea07cd0a4dcd653d4b52fa6a}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Active Object Localization with Deep Reinforcement Learning}
     \endentry
     \entry{camerafi}{book}{}
       \list{publisher}{1}{%
@@ -629,6 +685,37 @@
       \field{title}{OPTICAL PROPERTIES OF CIRCULATING HUMAN BLOOD IN THE WAVELENGTH RANGE 400–2500 NM}
       \field{year}{1999}
     \endentry
+    \entry{machineLearning}{book}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=a6c5827676b0a2058e5b904c3dd7f878}{%
+           family={Shalev-Shwartz},
+           familyi={S\bibinithyphendelim S\bibinitperiod},
+           given={Shai},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=509866d90ae18bfca30c6f4cdc846529}{%
+           family={Ben-David},
+           familyi={B\bibinithyphendelim D\bibinitperiod},
+           given={Shai},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{38fabf8438a7aae182a9d192e7aa2d98}
+      \strng{fullhash}{38fabf8438a7aae182a9d192e7aa2d98}
+      \strng{bibnamehash}{38fabf8438a7aae182a9d192e7aa2d98}
+      \strng{authorbibnamehash}{38fabf8438a7aae182a9d192e7aa2d98}
+      \strng{authornamehash}{38fabf8438a7aae182a9d192e7aa2d98}
+      \strng{authorfullhash}{38fabf8438a7aae182a9d192e7aa2d98}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Understanding Machine Learning: From Theory to Algorithms}
+      \field{year}{2014}
+    \endentry
     \entry{led}{book}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=5d771fdf88df032967e598043cb843c6}{%
@@ -780,6 +867,46 @@
       \field{labeltitlesource}{title}
       \field{title}{Optics of blood}
       \field{year}{2002}
+    \endentry
+    \entry{imageProcessing}{book}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=6bc0cd4bff20783c1e73e447a9c16149}{%
+           family={Young},
+           familyi={Y\bibinitperiod},
+           given={Ian\bibnamedelima T.},
+           giveni={I\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=c9cc99e28614280b2241fd415a9939b8}{%
+           family={Gerbrands},
+           familyi={G\bibinitperiod},
+           given={Jan\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=4c5467766540243244b954844553ede4}{%
+           family={Vliet},
+           familyi={V\bibinitperiod},
+           given={Lucas\bibnamedelima J.},
+           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0,
+           prefix={van},
+           prefixi={v\bibinitperiod},
+           prefixun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Delft University of Technology}%
+      }
+      \strng{namehash}{3366ecb534d8f47dc67faf17bccde9d8}
+      \strng{fullhash}{3366ecb534d8f47dc67faf17bccde9d8}
+      \strng{bibnamehash}{3366ecb534d8f47dc67faf17bccde9d8}
+      \strng{authorbibnamehash}{3366ecb534d8f47dc67faf17bccde9d8}
+      \strng{authornamehash}{3366ecb534d8f47dc67faf17bccde9d8}
+      \strng{authorfullhash}{3366ecb534d8f47dc67faf17bccde9d8}
+      \field{sortinit}{Y}
+      \field{sortinithash}{b8d711a035f7be9840c721c82920477e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Fundamentals of Image Processing}
+      \field{year}{2007}
     \endentry
   \enddatalist
 \endrefsection

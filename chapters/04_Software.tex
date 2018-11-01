@@ -32,15 +32,21 @@ Videos received by a camera are made up from a succession of still frames and ar
 
 \subsubsection{Image Processing}
 
+Image processing includes computational operations such as editing, analysing, enhancing and reconstructing images. 
+The meaning of the term image processing is not defined precisely. In the narrow meaning, image processing concerns operations that transform an image to another one. In the broader meaning, image processing includes all operations that have information at the visual output or input like image analysis, pattern recognition or Image synthesis. 
+
+The focus in this project is on image processing as image transformation. Raw images are received by the camera and then transformed to another images in order to enhance vein’s contrast.
 
 
 \subsubsection{Machine Learning}
 
+The term machine learning refers to the automated detection of meaningful patterns in data\parencite{machineLearning}.
+
+Using machine learning algorithms can be beneficial in automatically recognizing veins and highlighting or colouring them, and thus, making the task even easier for the operator. An algorithm is trained on a dataset of different images in a similar or same setting as in the practical case. It “learns” then how a vein could look like and can extract it from a new given image. The task of finding a vein in an image using machine learning is not hard and totally feasible as much more complex tasks are accomplished in this field like face localization\parencite{faceLocal} and active object localization \parencite{objectLocal} and they give great results and performance. However, using machine learning requires access to a reasonably big dataset to train the algorithm, which means an images dataset, where each image is taken in the same or similar setting as our setting. Such dataset is unfortunately unavailable.
+Moreover, if the image provides good contrast of the veins pattern, there is no need for such automatic recognition because it will be then an easy task for the operator to visually recognize it. For these reasons, machine learning was not employed in this work.
 
 
-\subsubsection{Conclusion}
-
-\subsection{Application Work Modes}
+\section{Application Work Modes}
 
 
 
