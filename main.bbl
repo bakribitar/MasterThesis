@@ -600,6 +600,38 @@
       \field{title}{USB 101: An Introduction to Universal Serial Bus 2.0}
       \field{year}{2017}
     \endentry
+    \entry{imageSeg}{book}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=9d5acc1f36cd7ec210fadd925e6c086b}{%
+           family={N},
+           familyi={N\bibinitperiod},
+           given={Senthilkumaran},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=44435b19231b7079344471a446104bfb}{%
+           family={S},
+           familyi={S\bibinitperiod},
+           given={Vaithegi},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {Computer Science}%
+        {Engineering: An International Journal}%
+      }
+      \strng{namehash}{f4187b9ad6707bf876d375931aec227e}
+      \strng{fullhash}{f4187b9ad6707bf876d375931aec227e}
+      \strng{bibnamehash}{f4187b9ad6707bf876d375931aec227e}
+      \strng{authorbibnamehash}{f4187b9ad6707bf876d375931aec227e}
+      \strng{authornamehash}{f4187b9ad6707bf876d375931aec227e}
+      \strng{authorfullhash}{f4187b9ad6707bf876d375931aec227e}
+      \field{sortinit}{N}
+      \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{IMAGE SEGMENTATION BY USING THRESHOLDING TECHNIQUES FOR MEDICAL IMAGES}
+      \field{year}{2016}
+    \endentry
     \entry{otg}{book}{}
       \list{publisher}{1}{%
         {USB Implementers Forum, Inc. (USB-IF)}%
@@ -635,6 +667,31 @@
       \field{labeltitlesource}{title}
       \field{title}{Practical C++ Programming}
       \field{year}{1995}
+    \endentry
+    \entry{comlicationsVeni4}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=ccff40a21ce4053302fe1d31c687577a}{%
+           family={Ramos},
+           familyi={R\bibinitperiod},
+           given={Juan\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Brazilian Journal of Anesthesiology}%
+      }
+      \strng{namehash}{ccff40a21ce4053302fe1d31c687577a}
+      \strng{fullhash}{ccff40a21ce4053302fe1d31c687577a}
+      \strng{bibnamehash}{ccff40a21ce4053302fe1d31c687577a}
+      \strng{authorbibnamehash}{ccff40a21ce4053302fe1d31c687577a}
+      \strng{authornamehash}{ccff40a21ce4053302fe1d31c687577a}
+      \strng{authorfullhash}{ccff40a21ce4053302fe1d31c687577a}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Venipuncture-related lateral antebrachial cutaneous nerve injury: what to know?}
+      \field{year}{2014}
     \endentry
     \entry{blood}{book}{}
       \name{author}{5}{}{%
@@ -715,6 +772,37 @@
       \field{labeltitlesource}{title}
       \field{title}{Understanding Machine Learning: From Theory to Algorithms}
       \field{year}{2014}
+    \endentry
+    \entry{comlicationsVeni3}{book}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=65b1a26615fc7cffb1e54cfbc1ce25ba}{%
+           family={Shivappagoudar},
+           familyi={S\bibinitperiod},
+           given={Vikram\bibnamedelima M},
+           giveni={V\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=9ef77124ad18dd21e17988f663866e83}{%
+           family={George},
+           familyi={G\bibinitperiod},
+           given={Bindu},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Indian Journal of Anaesthesia}%
+      }
+      \strng{namehash}{d0ac2d3dcd00377872433f1358d2bc9a}
+      \strng{fullhash}{d0ac2d3dcd00377872433f1358d2bc9a}
+      \strng{bibnamehash}{d0ac2d3dcd00377872433f1358d2bc9a}
+      \strng{authorbibnamehash}{d0ac2d3dcd00377872433f1358d2bc9a}
+      \strng{authornamehash}{d0ac2d3dcd00377872433f1358d2bc9a}
+      \strng{authorfullhash}{d0ac2d3dcd00377872433f1358d2bc9a}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Unintentional arterial cannulation during cephalic vein cannulation}
+      \field{year}{2013}
     \endentry
     \entry{led}{book}{}
       \name{author}{1}{}{%

@@ -47,11 +47,57 @@ Moreover, if the image provides good contrast of the veins pattern, there is no 
 
 
 \section{Application Work Modes}
+From software point of view, the application can work under two modes: raw NIR images without image processing and adaptive thresholding.
+
+\subsection{Raw NIR Images Mode}
+
+The term “raw NIR images” refers to the fact that no image processing operation was performed on the images before showing them on the screen. As stated in previous chapters, images from the adjusted webcam are sent to the mobile device via a third-party library, the UVC Camera library. As the camera is adjusted, it can sense almost only NIR light and no visible light. These raw images are not purely raw from hardware point of view, as they are already manipulated through the NIR-pass filter. They appear to be transformed in the greyscale. For normal healthy patients with relatively light skin colour, showing raw NIR images can provide good visualization of the veins pattern. \autoref{fig:RawNirImage} shows an NIR image of the arm of a normal healthy male person. No tourniquet was used while taking these images.
 
 
+\begin{figure}[H]
+\centering
+\includegraphics{figures/nir.JPG}
+\caption[Raw NIR Image of an Arm with Good Vein Contrast]{Raw NIR image of the arm of a normal healthy male person.}\label{fig:RawNirImage}
+\end{figure}
 
+The \autoref{fig:RawNirImage} shows a good contrast of the vein on the arm. Localizing the vein depending on this image is then an easy task. However, raw NIR images don’t always show such good contrast without any processing. Many different factors could be responsible for poor contrast in raw NIR images such as body weight, skin colour and gender.  In the \autoref{fig:RawNirImage1}  shows an arm of a normal female person on the same setting, poor contrast is noticeable and the vein has barely darker colour than the surrounding area.
+The result of venepuncture depending on images with such veins contrast will not be better than the traditional way of visual examination and palpation. The only remarkable difference between the two persons here is the gender. However, the gender factor is not necessarily the deciding factor. For another female person, vein contrast was as good as the contrast in \autoref{fig:RawNirImage}.
 
+\begin{figure}[H]
+\centering
+\includegraphics{figures/nirZein.JPG}
+\caption[Raw NIR Image of an Arm with Poor Vein Contrast]{Raw NIR image of the arm of a normal healthy female person.}\label{fig:RawNirImage1}
+\end{figure}
 
+\subsection{Adaptive Thresholding Mode}
+Because of poor vein contrast of raw NIR images in some cases, image processing can be of great benefit. Many image processing algorithms were tested in this work and they will be discussed in the last chapter. But only one approach was followed and used, the adaptive image thresholding.
+\subsubsection{Image Segmentation}
+Image segmentation is a fundamental process in many image, video, and computer vision applications. It is often used to partition an image into separate regions, which ideally correspond to different real-world objects\parencite{imageSeg}. It is the process of assigning a meaningful label to every set of pixels in the image so that these sets represent different segments. Like separating an object from the background or segmentation of multiple different objects in an image. Image segmentation is usually performed by identifying common properties between regions. Or, similarly, by identifying differences between them.
+
+\subsubsection{Image Thresholding}
+
+Image thresholding is the most common and simplest image processing approach to segment images. In general image thresholding aims to change pixel values depending on a threshold. For images in the greyscale, image thresholding yields binarized images, i.e. images that only has two colours. 
+
+Let $f(x; y)$ be the grey value of the image at pixel in position $(x; y)$; then thresholding using threshold value $t$ transforms this image into a binary image $f'(x; y)$ as follows:
+
+\begin{equation}
+\mathcal{} f'(x; y)
+  \begin{cases}
+    0 & \text{if $f(x; y) \leq t$} \\
+
+    255 & \text{otherwise}
+  \end{cases}
+\end{equation}
+
+All pixels below the threshold $t$ are turned into 0 and all others that are above this threshold are turned into 255. The threshold as well as the two assigned pixel values can be adjusted based on application specification.
+
+\subsubsection{Global Threshold}
+Global thresholding approach can be used if the intensity distribution between the segments is very distinct. In this method, only a single value (global value) for the threshold for all pixels in the image is used. Threshold value should be then carefully selected and based on practical results. However, any changes in the lightning conditions or colours of the image could affect the thresholding drastically and misclassify big regions in the image. Because the dependence is on the colour intensity only, not on any relationships between the pixels. These effects get worse as the noise increases, because it’s more likely that a pixel’s intensity doesn’t represent the normal intensity in the region. 
+Applying global thresholding on the NIR images has given very bad results. 
+
+\subsubsection{Local (Adaptive) Threshold}
+Another problem with global thresholding is that changes in illumination across the image may cause parts to be brighter and others darker. To overcome the global thresholding shortcomings, adaptive thresholding can be used. 
+Unlike global image thresholding, local image thresholding uses multiple, local, thresholds for each region of the image. Finding the local threshold across the image regions depends on the fact that smaller image regions are more likely to have approximately uniform illumination, thus being more suitable for thresholding.
 
 \section{Application Structure}
 The software application is basically an android application composed of two layers: the native layer, written in C++ and the Java layer. 
@@ -71,18 +117,18 @@ The \autoref{fig:applicationArchitecture} below shows the application high-level
 \end{figure}
 
 
-\section{C++ Layer}
+\subsection{C++ Layer}
 
 
 C++ is a highly flexible and adaptable language. Since its creation, it has been used for a wide variety of programs including firmware for micro-controllers, operating systems, applications, and graphics programming \parencite{cpp}.
 
 Written in C++, this application layer encompasses the UVC driver library which allows the application to communicate with the camera as well as the native image processing module, the OpenCV module.
 
-\subsection{USB Video Class}
+\subsubsection{USB Video Class}
 
 USB Video Class (UVC) describes the capabilities and characteristics of video streaming devices. It is widely used, such as desktop video cameras or webcams, digital camcorders, still-image cameras, and so forth. USB Video Class (UVC) is a standard class specification that standardizes video streaming functionality on the USB. It enables devices like webcams, digital camcorders, analog video converters, analog and digital television tuners etc to connect seamlessly with host machines. UVC supports streaming multiple video formats and provides structures for describing the functionalities of the video device to the host and defines USB requests to control different parameters of the device and characteristics of the video stream. It also provides flexibility for a video device to support multiple video resolutions, formats and frame rates, which highly influences the bandwidth negotiation between the device and the host \parencite{uvc}.
 
-\subsection{UVC Camera Library for Android}
+\subsubsection{UVC Camera Library for Android}
 Many OS platforms have native support for UVC drivers which greatly reduces the time required for developers to connect UVC devices. Unfortunately, android doesn’t offer such a support, therefore, to connect a UVC device such as a webcam, the device driver must be written by the developer. 
 Nevertheless, third-party and open source libraries offer good alternative solution for the UVC device drivers. An open source library to access to UVC webcams on non-rooted Android device called UVCCamera was used in this project \parencite{uvcCamera}. The library works on minimum android version 3.1 or later (API >= 12), but Android 4.0(API >= 14) or later is recommended.
 
@@ -92,17 +138,16 @@ OpenCV is written in C and C++ and runs under Linux, Windows and Mac OS X. OpenC
 
 
 
-\section{Java Layer}
+\subsection{Java Layer}
 
 
 The compiled Java code along with any data and resource files required by the application is bundled by the android asset packaging tool (AAPT) tool into an android package, an archive file marked by an .apk suffix.
 The Java layer includes the user interface (UI) components and all application buisness logic.
 
-\subsection{Permissions}
-\subsubsection{USB Host}
+\subsubsection{Permissions: USB Host}
 By default, Android does not allow an application to access the devices connected to the USB  port. To enable an application to interact with a the UVC camera directly connected by OTG cable, this functionality must be declared by adding the \texttt{<uses-feature android:name="android.hardware.usb.host"/>} tag in the manifest section in\texttt{AndroidManifest.xml}. 
 
-\subsubsection{Open GL}
+\subsubsection{Permissions: Open GL}
 
 OpenGL ES (Open Graphics Library for Embedded Systems) is an API to graphics hardware. The API consists of a set of several hundred procedures and functions that allow a programmer to specify the shader programs, objects and operations involved in producing high-quality graphical images, specifically color images of three-dimensional objects\parencite{openGl}.
 
