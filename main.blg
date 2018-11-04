@@ -1,17 +1,17 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'main.blg'
-[41] biber-MSWIN64:313> INFO - === 
-[79] Biber.pm:371> INFO - Reading 'main.bcf'
-[162] Biber.pm:854> INFO - Using all citekeys in bib section 0
-[175] Biber.pm:3976> INFO - Processing section 0
-[191] Biber.pm:4136> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
-[194] bibtex.pm:1500> INFO - LaTeX decoding ...
-[225] bibtex.pm:1316> INFO - Found BibTeX data source 'bibliography.bib'
-[256] Utils.pm:193> WARN - Name "Mayur Wadhwani, Abhinandan Deepak Sharma, Aditi Pillai, Nikita Pisal, Dr. Mita Bhowmick" has too many commas: skipping name
-[401] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[401] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[401] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[401] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
-[436] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[455] bbl.pm:720> INFO - Output to main.bbl
-[455] Biber.pm:110> INFO - WARNINGS: 1
+[62] biber-MSWIN64:313> INFO - === 
+[88] Biber.pm:371> INFO - Reading 'main.bcf'
+[172] Biber.pm:854> INFO - Using all citekeys in bib section 0
+[187] Biber.pm:3976> INFO - Processing section 0
+[202] Biber.pm:4136> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
+[207] bibtex.pm:1500> INFO - LaTeX decoding ...
+[238] bibtex.pm:1316> INFO - Found BibTeX data source 'bibliography.bib'
+[329] Utils.pm:193> WARN - Name "Mayur Wadhwani, Abhinandan Deepak Sharma, Aditi Pillai, Nikita Pisal, Dr. Mita Bhowmick" has too many commas: skipping name
+[399] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[399] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[399] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[399] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
+[434] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[456] bbl.pm:720> INFO - Output to main.bbl
+[457] Biber.pm:110> INFO - WARNINGS: 1

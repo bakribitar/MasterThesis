@@ -855,6 +855,28 @@
       \field{title}{UVCCamera}
       \field{year}{2017}
     \endentry
+    \entry{openCv1}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=2e0c3cac52a3e787243bb98ede19a5c6}{%
+           family={team},
+           familyi={t\bibinitperiod},
+           prefix={opencv\bibnamedelima dev},
+           prefixi={o\bibinitperiod\bibinitdelim d\bibinitperiod},
+           prefixun=0}}%
+      }
+      \strng{namehash}{2e0c3cac52a3e787243bb98ede19a5c6}
+      \strng{fullhash}{2e0c3cac52a3e787243bb98ede19a5c6}
+      \strng{bibnamehash}{2e0c3cac52a3e787243bb98ede19a5c6}
+      \strng{authorbibnamehash}{2e0c3cac52a3e787243bb98ede19a5c6}
+      \strng{authornamehash}{2e0c3cac52a3e787243bb98ede19a5c6}
+      \strng{authorfullhash}{2e0c3cac52a3e787243bb98ede19a5c6}
+      \field{sortinit}{t}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{OpenCV 2.4.13.7 documentation}
+      \field{year}{2018}
+    \endentry
     \entry{uvc}{book}{}
       \list{publisher}{1}{%
         {USB Implementers Forum}%

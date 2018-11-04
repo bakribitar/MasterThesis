@@ -56,7 +56,7 @@ The term “raw NIR images” refers to the fact that no image processing operat
 
 \begin{figure}[H]
 \centering
-\includegraphics{figures/nir.JPG}
+\includegraphics[scale=0.7]{figures/nir.JPG}
 \caption[Raw NIR Image of an Arm with Good Vein Contrast]{Raw NIR image of the arm of a normal healthy male person.}\label{fig:RawNirImage}
 \end{figure}
 
@@ -65,7 +65,7 @@ The result of venepuncture depending on images with such veins contrast will not
 
 \begin{figure}[H]
 \centering
-\includegraphics{figures/nirZein.JPG}
+\includegraphics[scale=0.7]{figures/nirZein.JPG}
 \caption[Raw NIR Image of an Arm with Poor Vein Contrast]{Raw NIR image of the arm of a normal healthy female person.}\label{fig:RawNirImage1}
 \end{figure}
 
@@ -93,11 +93,88 @@ All pixels below the threshold $t$ are turned into 0 and all others that are abo
 
 \subsubsection{Global Threshold}
 Global thresholding approach can be used if the intensity distribution between the segments is very distinct. In this method, only a single value (global value) for the threshold for all pixels in the image is used. Threshold value should be then carefully selected and based on practical results. However, any changes in the lightning conditions or colours of the image could affect the thresholding drastically and misclassify big regions in the image. Because the dependence is on the colour intensity only, not on any relationships between the pixels. These effects get worse as the noise increases, because it’s more likely that a pixel’s intensity doesn’t represent the normal intensity in the region. 
-Applying global thresholding on the NIR images has given very bad results. 
+Applying global thresholding on the NIR images has given very bad results. \autoref{fig:thresholdGlobal} shows a global thresholding result on the image in \autoref{fig:RawNirImage} using threshold value of 160.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{figures/thresholdGlobal.JPG}
+\caption[Global thresholding example]{Global thresholding on the image in \autoref{fig:RawNirImage}; threshold value: 160}\label{fig:thresholdGlobal}
+\end{figure}
 
 \subsubsection{Local (Adaptive) Threshold}
 Another problem with global thresholding is that changes in illumination across the image may cause parts to be brighter and others darker. To overcome the global thresholding shortcomings, adaptive thresholding can be used. 
-Unlike global image thresholding, local image thresholding uses multiple, local, thresholds for each region of the image. Finding the local threshold across the image regions depends on the fact that smaller image regions are more likely to have approximately uniform illumination, thus being more suitable for thresholding.
+Unlike global image thresholding, local image thresholding uses multiple, local, thresholds for each region of the image. Finding the local threshold across the image regions depends on the fact that smaller image regions are more likely to have approximately uniform illumination, thus being more suitable for thresholding. Automatic calculation of local threshold for each pixel can be achieved in many approaches such as mean calculation and Gaussian methods. In both methods, the threshold is calculated for each pixel by taking the neighbouring pixels into consideration. Depending on their values, the threshold value of the pixel can then be decided.
+
+\subsubsection{Local Threshold Calculation by Mean}
+For each pixel at $(x; y)$, the threshold value $T(x; y)$ is the mean value of the neighbouring pixels of $(x; y)$ in an area of size $blockSize \times blockSize$ minus a correction constant $C$. 
+
+Increasement of $blockSize$ results in more neighbouring pixels taken into consideration while calculating the threshold value for each pixel. Determining the block size is deciding factor for the quality of the results. Luckily, the block size can be set based on visual assessments of the results and doesn’t need to be reconsidered for other images in the same setting. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{figures/compare1.JPG}
+\captionsetup{justification=centering}
+\caption[Effect of block size on mean adaptive thresholding]{Effect of block size on mean adaptive thresholding;\\C of both: 2; blocksize: left 7, right 41}\label{fig:compare1}
+\end{figure}
+
+The correction constant is a constant value that is subtracted from each threshold. Increasing this constant reduces noise but, of course, might result into loss of some desired details. Normally, this constant is positive but it can be assigned a negative value as well.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{figures/compare2.JPG}
+\captionsetup{justification=centering}
+
+\caption[Effect of correction constant on mean adaptive thresholding]{Effect of correction constant on mean adaptive thresholding;\\ blocksize for both: 91; C: left 0, right 2}\label{fig:compare2}
+\end{figure}
+
+\subsubsection{Local Threshold Calculation by Gaussian}
+For each pixel at $(x; y)$, the threshold value $T(x; y)$ is the is a weighted sum (cross-correlation with a Gaussian window) of the neighbouring pixels of $(x; y)$ in an area of size $blockSize \times blockSize$ minus a correction constant $C$. 
+
+The main approach is similar to the previous approach in mean calculation. The only difference is the relation between the pixels or pixel regions. In mean calculation approach, all pixels in a surrounding area of size $blockSize \times blockSize$ have the same weight in the calculation, and thus, they have the same effect on the final threshold value. In Gaussian calculation approach, cross correlation of the area surrounding each pixel is used to assess how similar this area with each neighbouring area. A weighted sum is then calculated.
+
+Cross-Correlation $g(i ;j)$ of two functions $f(x ;y)$ and $ h(x; y)$ can be calculated as follows:
+
+\begin{equation}
+g(i;j) = f(x; y) \otimes h(x; y) = \iint_{-\infty}^{+\infty} f(x; y) h(i - x; i - y) dx dy
+\end{equation}
+ 
+Similar to mean adaptive thresholding, block size and correction constant have impact on the result’s quality.  
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{figures/compare3.JPG}
+\captionsetup{justification=centering}
+\caption[Effect of block size on Gaussian adaptive thresholding]{Effect of block size on Gaussian adaptive thresholding;\\C for both: 2; blocksize: left 7, right 41}\label{fig:compare3}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{figures/compare4.JPG}
+\captionsetup{justification=centering}
+
+\caption[Effect of correction constant on Gaussian adaptive thresholding]{Effect of correction constant on Gaussian adaptive thresholding;\\ blocksize for both: 91; C: left 0, right 2}\label{fig:compare4}
+\end{figure}
+
+\subsubsection{Median Filter}
+In addition to the correction constant, image noise removing can be achieved by applying a filer after getting the adapt thresholding result. A good candidate here is the median filter. Similar to the adapt thresholding, median filter is a nonlinear image processing operation. The median filter is an effective method that can, distinguish out-of-range isolated noise from legitimate image features such as edges and lines. Noise reduction is done replacing each pixel with the median of all pixels in a defined size neighbourhood $w$ of the given pixel. 
+
+\begin{equation}
+f(x; y) = median \{g(x; y) | (x; y)\in w   \}
+\end{equation}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{figures/compare5.JPG}
+\captionsetup{justification=centering}
+
+\caption[Median filter]{Median filter; left: result of Gaussian adaptive threshodling with blocksize: 91, C: 2; right: result of applying median filter with kernel size: 4}\label{fig:compare5}
+\end{figure}
+
+
+The median filter is better than the average filter, which calculates the average of pixels in the neighbourhood and replaces every pixel with it. Because in average filter, a single pixel with a very unrepresentative value can significantly affect the average value of all the pixels in its neighbourhood. 
+
 
 \section{Application Structure}
 The software application is basically an android application composed of two layers: the native layer, written in C++ and the Java layer. 
@@ -113,10 +190,9 @@ The \autoref{fig:applicationArchitecture} below shows the application high-level
 \begin{figure}[H]
 \centering
 \includegraphics{figures/applicationArchitecture.JPG}
+
 \caption[Application architecture]{Application architecture}\label{fig:applicationArchitecture}
 \end{figure}
-
-
 \subsection{C++ Layer}
 
 
@@ -134,8 +210,9 @@ Nevertheless, third-party and open source libraries offer good alternative solut
 
 
 \subsubsection{Open Computer Vision Library}
-OpenCV is written in C and C++ and runs under Linux, Windows and Mac OS X. OpenCV was designed for computational efficiency and with a strong focus on realtime applications. OpenCV is written in optimized C and can take advantage of multicore processors. One of OpenCV’s goals is to provide a simple-to-use computer vision infrastructure that helps people build fairly sophisticated vision applications quickly \parencite{openCv}.
+OpenCV is written in C and C++ and runs under Linux, Windows and Mac OS X. OpenCV was designed for computational efficiency and with a strong focus on realtime applications and can take advantage of multicore processors. One of OpenCV’s goals is to provide a simple-to-use computer vision infrastructure that helps people build fairly sophisticated vision applications quickly \parencite{openCv}.
 
+OpenCV offers support for common image processing algorithms. Adaptive thresholding, for example, is implemented in this project using OpenCV. The video captured by the camera is a sequence of images. Each image can be represented as a matrix of numbers. Image processing algorithms tend to be quite computationally heavy, therefore, OpenCV has its own type to represent arrays, namely the $Mat$ class. $Mat$ can be used to store real or complex-valued vectors and matrices, grayscale or colour images and more. It is optimized to be passed to the functions without making unnecessary copies. Each $Mat$ object has a header, the matrix that holds the data may be shared between two instances of them by having their matrix pointers point to the same address. Moreover, the copy operators will only copy the headers and the pointer to the large matrix, not the data itself \parencite{openCv1}.
 
 
 \subsection{Java Layer}
