@@ -19,6 +19,56 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{burn}{book}{}
+      \name{author}{5}{}{%
+        {{uniquename=1,uniquepart=given,hash=1bb9dc5fe08930d810440b422d2c85d3}{%
+           family={a},
+           familyi={a\bibinitperiod},
+           given={Meghann\bibnamedelima Kaiser},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=0,uniquepart=base,hash=7cbd967a8c444c7dd503b4742ab9938f}{%
+           family={b},
+           familyi={b\bibinitperiod},
+           given={Amr\bibnamedelima Yafi},
+           giveni={A\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=a999d8ce5f537619d1e5904c0baa87ed}{%
+           family={a},
+           familyi={a\bibinitperiod},
+           given={Marianne\bibnamedelima Cinat},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=0,uniquepart=base,hash=c02e858fcc8a08eb22befdb25e93f9f1}{%
+           family={b},
+           familyi={b\bibinitperiod},
+           given={Bernard\bibnamedelima Choi},
+           giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=ec1b494891081bed235879090822c502}{%
+           family={b},
+           familyi={b\bibinitperiod},
+           given={Anthony\bibnamedelimb J.\bibnamedelimi Durkin},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {Elsevier Ltd}%
+        {ISBI.}%
+      }
+      \strng{namehash}{73b5b7955d9cee49113c10051ea4d1d3}
+      \strng{fullhash}{24ed6c2949e5ea4699b10610e21e7759}
+      \strng{bibnamehash}{24ed6c2949e5ea4699b10610e21e7759}
+      \strng{authorbibnamehash}{24ed6c2949e5ea4699b10610e21e7759}
+      \strng{authornamehash}{73b5b7955d9cee49113c10051ea4d1d3}
+      \strng{authorfullhash}{24ed6c2949e5ea4699b10610e21e7759}
+      \field{sortinit}{a}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Noninvasive Assessment of Burn Wound Severity Using Optical Technology: A Review of Current and Future Modalities}
+      \field{year}{2010}
+    \endentry
     \entry{study1}{book}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=83f04de2b3f43f04a03d6e01b5ada7d9}{%
@@ -186,7 +236,7 @@
       \field{sortinithash}{276475738cc058478c1677046f857703}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{The mechanical behavior of skin: Structures and models for the finite element analysis.}
+      \field{title}{The Mechanical Behavior of Skin: Structures and Models for the Finite Element Analysis}
       \field{year}{2017}
     \endentry
     \entry{ledSafety}{book}{}
@@ -217,7 +267,7 @@
       \field{sortinithash}{276475738cc058478c1677046f857703}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Safety assessment of near infrared light emitting diodes for diffuse optical measurements}
+      \field{title}{Safety Assessment of Near Infrared Light Emitting Diodes for Diffuse Optical Measurements}
       \field{year}{2004}
     \endentry
     \entry{openCv}{book}{}
@@ -282,7 +332,7 @@
       \field{sortinithash}{276475738cc058478c1677046f857703}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{The identification	of tattoo designs under cover-up tattoos using digital infrared photography}
+      \field{title}{The Identification of Tattoo Designs Under Cover-up Tattoos Using Digital Infrared Photography}
     \endentry
     \entry{objectLocal}{book}{}
       \name{author}{2}{}{%
@@ -346,7 +396,7 @@
       \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Intravenous cannulation: potential complications}
+      \field{title}{Intravenous Cannulation: Potential Complications}
       \field{year}{1997}
     \endentry
     \entry{clinicalPredi}{book}{}
@@ -371,7 +421,7 @@
       \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Development of a clinical prediction rule to improve peripheral intravenous cannulae first attempt success in the emergency department and reduce post insertion failure rates: the Vascular Access Decisions in the Emergency Room (VADER) study protocol}
+      \field{title}{Development of a Clinical Prediction Rule to Improve Peripheral Intravenous Cannulae First Attempt Success in the Emergency Department and Reduce Post Insertion Failure Rates: the Vascular Access Decisions in the Emergency Room (Vader) Study Protocol}
       \field{year}{2016}
     \endentry
     \entry{roboVenipuncture}{book}{}
@@ -399,6 +449,31 @@
       \field{title}{Image-Guided Robotics for Autonomous Venipuncture}
       \field{year}{2016}
     \endentry
+    \entry{ndk}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=fae0cde86b884f34bb8aefd6b297850d}{%
+           family={Cinar},
+           familyi={C\bibinitperiod},
+           given={Onur},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Apress}%
+      }
+      \strng{namehash}{fae0cde86b884f34bb8aefd6b297850d}
+      \strng{fullhash}{fae0cde86b884f34bb8aefd6b297850d}
+      \strng{bibnamehash}{fae0cde86b884f34bb8aefd6b297850d}
+      \strng{authorbibnamehash}{fae0cde86b884f34bb8aefd6b297850d}
+      \strng{authornamehash}{fae0cde86b884f34bb8aefd6b297850d}
+      \strng{authorfullhash}{fae0cde86b884f34bb8aefd6b297850d}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Pro Android C++ with the NDK}
+      \field{year}{2012}
+    \endentry
     \entry{ledEyeSafe2}{book}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=dab46c421eba2cfbe732be3559951fe2}{%
@@ -425,6 +500,30 @@
       \field{title}{Laser and LED eye hazards: Safety standards.}
       \field{year}{1997}
     \endentry
+    \entry{laplace}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=8729217eb2918a57a5ecbc9f0f69a52b}{%
+           family={Dodson},
+           familyi={D\bibinitperiod},
+           given={C.T.J.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {School of Mathematics, Manchester University}%
+      }
+      \strng{namehash}{8729217eb2918a57a5ecbc9f0f69a52b}
+      \strng{fullhash}{8729217eb2918a57a5ecbc9f0f69a52b}
+      \strng{bibnamehash}{8729217eb2918a57a5ecbc9f0f69a52b}
+      \strng{authorbibnamehash}{8729217eb2918a57a5ecbc9f0f69a52b}
+      \strng{authornamehash}{8729217eb2918a57a5ecbc9f0f69a52b}
+      \strng{authorfullhash}{8729217eb2918a57a5ecbc9f0f69a52b}
+      \field{sortinit}{D}
+      \field{sortinithash}{2ef1bd9a78cc71eb74d7231c635177b8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introduction to Laplace Transforms for Engineers}
+    \endentry
     \entry{ledEyeSafe3}{book}{}
       \list{publisher}{1}{%
         {OSRAM Opto Semiconductors GmbH}%
@@ -437,14 +536,14 @@
     \endentry
     \entry{opticsOfBlood1}{book}{}
       \name{author}{2}{}{%
-        {{uniquename=0,uniquepart=base,hash=9014b0d6a34d5b513f9badca68bc35b8}{%
-           family={FRIEBEL},
+        {{uniquename=0,uniquepart=base,hash=7c10a20ed0be782df70ac1fb65de2a04}{%
+           family={Friebel},
            familyi={F\bibinitperiod},
            given={M.},
            giveni={M\bibinitperiod},
            givenun=0}}%
-        {{uniquename=0,uniquepart=base,hash=d873fb64c1658e65b0f865168098c173}{%
-           family={HELFMANN},
+        {{uniquename=0,uniquepart=base,hash=f37873012dc4625d44764fd46a598b36}{%
+           family={Helfmann},
            familyi={H\bibinitperiod},
            given={J.},
            giveni={J\bibinitperiod},
@@ -453,17 +552,17 @@
       \list{publisher}{1}{%
         {J. Biomed. Opt}%
       }
-      \strng{namehash}{20fec60f24d9616a173694a0e760dbd1}
-      \strng{fullhash}{20fec60f24d9616a173694a0e760dbd1}
-      \strng{bibnamehash}{20fec60f24d9616a173694a0e760dbd1}
-      \strng{authorbibnamehash}{20fec60f24d9616a173694a0e760dbd1}
-      \strng{authornamehash}{20fec60f24d9616a173694a0e760dbd1}
-      \strng{authorfullhash}{20fec60f24d9616a173694a0e760dbd1}
+      \strng{namehash}{1fa22cd2000d015c7e95aa88d32364f5}
+      \strng{fullhash}{1fa22cd2000d015c7e95aa88d32364f5}
+      \strng{bibnamehash}{1fa22cd2000d015c7e95aa88d32364f5}
+      \strng{authorbibnamehash}{1fa22cd2000d015c7e95aa88d32364f5}
+      \strng{authornamehash}{1fa22cd2000d015c7e95aa88d32364f5}
+      \strng{authorfullhash}{1fa22cd2000d015c7e95aa88d32364f5}
       \field{sortinit}{F}
       \field{sortinithash}{669c706c6f1fbf3b5a83d26f1d9e9e72}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Optical properties of platelets and blood plasma and their influence on the optical behavior of whole blood in the visible to near infrared wavelength range}
+      \field{title}{Optical Properties of Platelets and Blood Plasma and Their Influence on the Optical Behavior of Whole Blood in the Visible to Near Infrared Wavelength Range}
       \field{year}{2007}
     \endentry
     \entry{comlicationsVeni}{book}{}
@@ -488,8 +587,50 @@
       \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Complications Occurring From Diagnostic Venipuncture}
+      \field{title}{Complications Occurring from Diagnostic Venipuncture}
       \field{year}{1992}
+    \endentry
+    \entry{hough}{book}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,uniquepart=base,hash=1ad986f00a73fbef9847e0581b545451}{%
+           family={Hassanein},
+           familyi={H\bibinitperiod},
+           given={Allam\bibnamedelima Shehata},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=1492dccdf51d6b1e01eba5031bdcfe5c}{%
+           family={Mohammad},
+           familyi={M\bibinitperiod},
+           given={Sherien},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=572162138c7392beecf517aac18cea27}{%
+           family={Sameer},
+           familyi={S\bibinitperiod},
+           given={Mohamed},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=f217e2155f25de652d889810371c3941}{%
+           family={Ragab},
+           familyi={R\bibinitperiod},
+           given={Mohammad\bibnamedelima Ehab},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Informatics Department, Electronics Research Institute, Egypt}%
+      }
+      \strng{namehash}{ef015c62c1fc46208186348d078ea6fa}
+      \strng{fullhash}{ef015c62c1fc46208186348d078ea6fa}
+      \strng{bibnamehash}{ef015c62c1fc46208186348d078ea6fa}
+      \strng{authorbibnamehash}{ef015c62c1fc46208186348d078ea6fa}
+      \strng{authornamehash}{ef015c62c1fc46208186348d078ea6fa}
+      \strng{authorfullhash}{ef015c62c1fc46208186348d078ea6fa}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A Survey on Hough Transform, Theory, Techniques and Applications}
     \endentry
     \entry{ledEyeSafety}{book}{}
       \name{author}{2}{}{%
@@ -572,8 +713,113 @@
       \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{A. Methods of obtaining peripheral venous access in difficult situations}
+      \field{title}{A. Methods of Obtaining Peripheral Venous Access in Difficult Situations}
       \field{year}{1999}
+    \endentry
+    \entry{skinCancer}{book}{}
+      \name{author}{8}{}{%
+        {{uniquename=0,uniquepart=base,hash=1ee614cde1e657999be85f289725cee7}{%
+           family={McIntosh},
+           familyi={M\bibinitperiod},
+           given={Laura\bibnamedelima M.},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=16b0b811eb312d54f470b1d814a8d153}{%
+           family={Summers},
+           familyi={S\bibinitperiod},
+           given={Randy},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=2c13cc62c99d805049bd26fd8fedfe64}{%
+           family={Jackson},
+           familyi={J\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=d567a02e2c257bcee6da2f4667f1abb1}{%
+           family={Mantsch},
+           familyi={M\bibinitperiod},
+           given={Henry\bibnamedelima H.},
+           giveni={H\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=0738ccdfbe7820e239a7011f8650426e}{%
+           family={Mansfield},
+           familyi={M\bibinitperiod},
+           given={James\bibnamedelima R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=547840032cd09e8789ecacdda71a5359}{%
+           family={Howlett},
+           familyi={H\bibinitperiod},
+           given={Marilyn},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=065b4d70ff156dcd975f1332c0ed1e5a}{%
+           family={Crowson},
+           familyi={C\bibinitperiod},
+           given={A.\bibnamedelimi Neil},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=7a3d1e862a904f02ffd72172381ec820}{%
+           family={Toole},
+           familyi={T\bibinitperiod},
+           given={John\bibnamedelimb W.\bibnamedelimi P.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {The Society for Investigative Dermatology, Inc}%
+      }
+      \strng{namehash}{deefc15cd5708e37be0c6836bc66bfdb}
+      \strng{fullhash}{500159c7946627df8d71230b359194df}
+      \strng{bibnamehash}{500159c7946627df8d71230b359194df}
+      \strng{authorbibnamehash}{500159c7946627df8d71230b359194df}
+      \strng{authornamehash}{deefc15cd5708e37be0c6836bc66bfdb}
+      \strng{authorfullhash}{500159c7946627df8d71230b359194df}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Towards Non-Invasive Screening of Skin Lesions by NearInfrared Spectroscopy}
+      \field{year}{2001}
+      \warn{\item Name in key 'skinCancer' is empty (probably consecutive 'and'): skipping name}
+    \endentry
+    \entry{skinTypes}{book}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=873ef49095080915d9dfeedf22a86b10}{%
+           family={Mendenhall},
+           familyi={M\bibinitperiod},
+           given={Michael\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=f2e45bfe1160699eb346f462175a159f}{%
+           family={Nunez},
+           familyi={N\bibinitperiod},
+           given={Abel\bibnamedelima S.},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=b41a4baa251c65db5f522262ce485739}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={Richard\bibnamedelima K.},
+           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Applied Optics}%
+      }
+      \strng{namehash}{b2e141b98b96d211752007af1ea4c181}
+      \strng{fullhash}{b2e141b98b96d211752007af1ea4c181}
+      \strng{bibnamehash}{b2e141b98b96d211752007af1ea4c181}
+      \strng{authorbibnamehash}{b2e141b98b96d211752007af1ea4c181}
+      \strng{authornamehash}{b2e141b98b96d211752007af1ea4c181}
+      \strng{authorfullhash}{b2e141b98b96d211752007af1ea4c181}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Human Skin Detection in the Visible and Near Infrared}
+      \field{year}{2015}
     \endentry
     \entry{usb}{book}{}
       \name{author}{1}{}{%
@@ -629,7 +875,7 @@
       \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{IMAGE SEGMENTATION BY USING THRESHOLDING TECHNIQUES FOR MEDICAL IMAGES}
+      \field{title}{Image Segmentation by Using Thresholding Techniques for Medical Images}
       \field{year}{2016}
     \endentry
     \entry{otg}{book}{}
@@ -690,15 +936,15 @@
       \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Venipuncture-related lateral antebrachial cutaneous nerve injury: what to know?}
+      \field{title}{Venipuncture-related Lateral Antebrachial Cutaneous Nerve Injury: What to Know?}
       \field{year}{2014}
     \endentry
     \entry{blood}{book}{}
       \name{author}{5}{}{%
-        {{uniquename=0,uniquepart=base,hash=b65b82e68f4cb5eeb27d2ebfc494c19a}{%
+        {{uniquename=0,uniquepart=base,hash=23b108c0c768e67abf6027012a390512}{%
            family={Roggan},
            familyi={R\bibinitperiod},
-           given={Andre´},
+           given={Andre},
            giveni={A\bibinitperiod},
            givenun=0}}%
         {{uniquename=0,uniquepart=base,hash=e097cd0eebf460854df60c343b27cf6d}{%
@@ -727,19 +973,19 @@
            givenun=0}}%
       }
       \list{publisher}{1}{%
-        {JOURNAL OF BIOMEDICAL OPTICS 4(1), 36–46}%
+        {Journal of Biomedical Optics}%
       }
-      \strng{namehash}{e1dbba5c4b8420429ac304f821ae1cf1}
-      \strng{fullhash}{d739f1002e6845e6306e7a73cc652c11}
-      \strng{bibnamehash}{d739f1002e6845e6306e7a73cc652c11}
-      \strng{authorbibnamehash}{d739f1002e6845e6306e7a73cc652c11}
-      \strng{authornamehash}{e1dbba5c4b8420429ac304f821ae1cf1}
-      \strng{authorfullhash}{d739f1002e6845e6306e7a73cc652c11}
+      \strng{namehash}{85c8f41760a15762ca8814731f61fded}
+      \strng{fullhash}{cdded1a9f591f45c06a4c5d3c07fe052}
+      \strng{bibnamehash}{cdded1a9f591f45c06a4c5d3c07fe052}
+      \strng{authorbibnamehash}{cdded1a9f591f45c06a4c5d3c07fe052}
+      \strng{authornamehash}{85c8f41760a15762ca8814731f61fded}
+      \strng{authorfullhash}{cdded1a9f591f45c06a4c5d3c07fe052}
       \field{sortinit}{R}
       \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{OPTICAL PROPERTIES OF CIRCULATING HUMAN BLOOD IN THE WAVELENGTH RANGE 400–2500 NM}
+      \field{title}{Optical Properties of Circulating Human Blood in the Wavelength Range 400–2500 Nm}
       \field{year}{1999}
     \endentry
     \entry{machineLearning}{book}{}
@@ -801,7 +1047,7 @@
       \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Unintentional arterial cannulation during cephalic vein cannulation}
+      \field{title}{Unintentional Arterial Cannulation During Cephalic Vein Cannulation}
       \field{year}{2013}
     \endentry
     \entry{led}{book}{}
@@ -827,7 +1073,7 @@
       \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{BASICS OF LIGHT EMITTING DIODES, CHARACTERIZATIONS AND APPLICATIONS}
+      \field{title}{Basics of Light Emitting Diodes, Characterizations and Applications}
     \endentry
     \entry{uvcCamera}{book}{}
       \name{author}{1}{}{%
@@ -857,24 +1103,24 @@
     \endentry
     \entry{openCv1}{book}{}
       \name{author}{1}{}{%
-        {{uniquename=0,uniquepart=base,hash=2e0c3cac52a3e787243bb98ede19a5c6}{%
-           family={team},
-           familyi={t\bibinitperiod},
-           prefix={opencv\bibnamedelima dev},
-           prefixi={o\bibinitperiod\bibinitdelim d\bibinitperiod},
-           prefixun=0}}%
+        {{uniquename=0,uniquepart=base,hash=fb5f0a941fd2286a72089795d0e4d5a9}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={Opencv\bibnamedelima Dev},
+           giveni={O\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{2e0c3cac52a3e787243bb98ede19a5c6}
-      \strng{fullhash}{2e0c3cac52a3e787243bb98ede19a5c6}
-      \strng{bibnamehash}{2e0c3cac52a3e787243bb98ede19a5c6}
-      \strng{authorbibnamehash}{2e0c3cac52a3e787243bb98ede19a5c6}
-      \strng{authornamehash}{2e0c3cac52a3e787243bb98ede19a5c6}
-      \strng{authorfullhash}{2e0c3cac52a3e787243bb98ede19a5c6}
-      \field{sortinit}{t}
+      \strng{namehash}{fb5f0a941fd2286a72089795d0e4d5a9}
+      \strng{fullhash}{fb5f0a941fd2286a72089795d0e4d5a9}
+      \strng{bibnamehash}{fb5f0a941fd2286a72089795d0e4d5a9}
+      \strng{authorbibnamehash}{fb5f0a941fd2286a72089795d0e4d5a9}
+      \strng{authornamehash}{fb5f0a941fd2286a72089795d0e4d5a9}
+      \strng{authorfullhash}{fb5f0a941fd2286a72089795d0e4d5a9}
+      \field{sortinit}{T}
       \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{OpenCV 2.4.13.7 documentation}
+      \field{title}{OpenCV 2.4.13.7 Documentation}
       \field{year}{2018}
     \endentry
     \entry{uvc}{book}{}
@@ -895,7 +1141,7 @@
       \field{sortinit}{V}
       \field{sortinithash}{75dd7385c90b2252c3ae853a80ca853b}
       \field{labeltitlesource}{title}
-      \field{title}{Vein Detection System using Infrared Light}
+      \field{title}{Vein Detection System Using Infrared Light}
       \field{year}{2015}
       \warn{\item Name "Mayur Wadhwani, Abhinandan Deepak Sharma, Aditi Pillai, Nikita Pisal, Dr. Mita Bhowmick" has too many commas: skipping name}
     \endentry
@@ -952,30 +1198,30 @@
     \endentry
     \entry{opticsOfBlood}{book}{}
       \name{author}{2}{}{%
-        {{uniquename=0,uniquepart=base,hash=655e6378ee3a6f72b76dbcaecdd402ee}{%
-           family={YAROSLAVSKY},
+        {{uniquename=0,uniquepart=base,hash=748540026031a9a074be41d45cf4275d}{%
+           family={Yaroslavsky},
            familyi={Y\bibinitperiod}}}%
-        {{uniquename=0,uniquepart=base,hash=4f77e2c8df204975cd11396d206476c0}{%
+        {{uniquename=0,uniquepart=base,hash=6cd2a0755bf546f6ed5cb7f1b7f0670a}{%
            family={A.\bibnamedelimi N.},
            familyi={A\bibinitperiod\bibinitdelim N\bibinitperiod},
-           given={PRIEZZHEV},
+           given={Priezzhev},
            giveni={P\bibinitperiod},
            givenun=0}}%
       }
       \list{publisher}{1}{%
         {V. V. Tuchin, Ed., SPIE-Press}%
       }
-      \strng{namehash}{a5cd41dc7287029c0f651bdb7164d63a}
-      \strng{fullhash}{a5cd41dc7287029c0f651bdb7164d63a}
-      \strng{bibnamehash}{a5cd41dc7287029c0f651bdb7164d63a}
-      \strng{authorbibnamehash}{a5cd41dc7287029c0f651bdb7164d63a}
-      \strng{authornamehash}{a5cd41dc7287029c0f651bdb7164d63a}
-      \strng{authorfullhash}{a5cd41dc7287029c0f651bdb7164d63a}
+      \strng{namehash}{b9345ff7d964f390b050fef9a7405408}
+      \strng{fullhash}{b9345ff7d964f390b050fef9a7405408}
+      \strng{bibnamehash}{b9345ff7d964f390b050fef9a7405408}
+      \strng{authorbibnamehash}{b9345ff7d964f390b050fef9a7405408}
+      \strng{authornamehash}{b9345ff7d964f390b050fef9a7405408}
+      \strng{authorfullhash}{b9345ff7d964f390b050fef9a7405408}
       \field{sortinit}{Y}
       \field{sortinithash}{b8d711a035f7be9840c721c82920477e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Optics of blood}
+      \field{title}{Optics of Blood}
       \field{year}{2002}
     \endentry
     \entry{imageProcessing}{book}{}

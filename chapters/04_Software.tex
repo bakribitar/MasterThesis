@@ -3,7 +3,7 @@
 
 \chapter{Software Application}\label{Software Application}
 
-\section{Methodolgy}
+\section{Methodology}
 The main focus is to develop a low-cost mobile system to locate and examine veins. As one can infer from the design of the hardware extension from the previous chapter, the cost of the hardware components is mainly the cost of a normal webcam, NIR-pass filter, a PCB breadboard and a set of NIR LEDs. Obviously, the cost of these elements is very low (under 30 Euros). The second component is the software application. In order to maintain the low-cost constraint, the software application must be run on normal android mobiles or tablets. Not on special hardware or expensive embedded systems.
 
 \subsection{Control of Hardware Extension}
@@ -29,21 +29,71 @@ In our setting, raw videos that come directly from the NIR camera provide good v
 Veins visualization can be enhanced more using image processing or machine learning.
 Videos received by a camera are made up from a succession of still frames and are then played one after the other several times a second. Image enhancement algorithms can be applied on each frame separately each time a new frame arrives from the camera. The result is then displayed in the real time on the screen.
 
+\subsubsection{Machine Learning}
 
-\subsubsection{Image Processing}
+The term machine learning refers to the automated detection of meaningful patterns in data \parencite{machineLearning}.
+Using machine learning algorithms can be beneficial in automatically recognizing veins and highlighting or colouring them, and thus, making the task even easier for the operator. An algorithm is trained on a dataset of different images in a similar or same setting as in the practical case. It “learns” then how a vein could look like and can extract it from a new given image. The task of finding a vein in an image using machine learning is not hard and totally feasible as much more complex tasks are accomplished in this field like face localization \parencite{faceLocal} and active object localization \parencite{objectLocal} and they give great results and performance. However, using machine learning requires access to a reasonably big dataset to train the algorithm, which means an images dataset, where each image is taken in the same or similar setting as our setting. Such dataset is unfortunately unavailable.
+Moreover, if the image provides good contrast of the veins pattern, there is no need for such automatic recognition because it will be then an easy task for the operator to visually recognize it. For these reasons, machine learning was not employed in this work.
+
+
+\subsubsection{Image Processing: General Overview}
 
 Image processing includes computational operations such as editing, analysing, enhancing and reconstructing images. 
 The meaning of the term image processing is not defined precisely. In the narrow meaning, image processing concerns operations that transform an image to another one. In the broader meaning, image processing includes all operations that have information at the visual output or input like image analysis, pattern recognition or Image synthesis. 
 
-The focus in this project is on image processing as image transformation. Raw images are received by the camera and then transformed to another images in order to enhance vein’s contrast.
+The focus is image processing as image transformation. Raw images are received by the camera and then transformed into another images in order to enhance vein’s contrast. 
+
+Many image processing algorithms were tested in this work. But only one approach was followed and used, the adaptive image thresholding, which will be explained in detail in application work modes section. 
+In the following, we discuss some of image processing algorithms, which we tried to employ in this project, but yielded insufficient results.
+
+\subsubsection{Image Processing: Hough Transformation}
+
+The Hough Transform is a method for finding lines in an image. In its classical form it was restricted to features that can be specified in a parametric form. However, a generalized version of the algorithm exists which can also be applied to features with no simple analytic form \parencite{hough}. Before applying Hough transform, an edge detector like Canny edge detector must be applied. Using Hough transform, lines in the image can be detected. The idea depends on the fact that after edge detection, only a few lines that pass through a given set of edge pixels exist. These common lines can be thought of as candidates for the actual line (if it exists) that passes through all of the nearby edge pixels. To find this common set of lines, a Hough transform to Hough space is performed. 
+
+To understand the Hough transform, it is important to know what the Hough space is. Each edge pixel in the original space is a line or curve in the Hough space. In Hough Space, each line represents a point from the original space, and each point represents a line from Image Space. The problem is now to solve for the intersections between lines in Hough space, and transform that intersection point back into the original space to obtain a line which intersects enough edge pixels. 
+Using Hough transform method has shown promising results on outer edge detection. However, practically and probably due to erroneous calibration of algorithm variables, line detection by Hough transformation using OpenCV yielded insufficient results.
 
 
-\subsubsection{Machine Learning}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{figures/compare6.JPG}
+\caption[Hough transform, detection of edges]{Hough transform, detection of edges}\label{fig:Compare6}
+\end{figure}
 
-The term machine learning refers to the automated detection of meaningful patterns in data\parencite{machineLearning}.
 
-Using machine learning algorithms can be beneficial in automatically recognizing veins and highlighting or colouring them, and thus, making the task even easier for the operator. An algorithm is trained on a dataset of different images in a similar or same setting as in the practical case. It “learns” then how a vein could look like and can extract it from a new given image. The task of finding a vein in an image using machine learning is not hard and totally feasible as much more complex tasks are accomplished in this field like face localization\parencite{faceLocal} and active object localization \parencite{objectLocal} and they give great results and performance. However, using machine learning requires access to a reasonably big dataset to train the algorithm, which means an images dataset, where each image is taken in the same or similar setting as our setting. Such dataset is unfortunately unavailable.
-Moreover, if the image provides good contrast of the veins pattern, there is no need for such automatic recognition because it will be then an easy task for the operator to visually recognize it. For these reasons, machine learning was not employed in this work.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{figures/compare7.JPG}
+\caption[Hough transform, failed detection of veins]{Hough transform, failed detection of veins}\label{fig:Compare7}
+\end{figure}
+
+
+\subsubsection{Image Processing: Laplacian Transformation}
+The Laplacian of an image highlights regions of rapid intensity change and is therefore often used for edge detection. It can be considered as an equivalent measure of the second derivative in 2D.
+Given $f$, a function of time, with value $f(t)$ at time $t$, the Laplace transform of $f$ is denoted $\widetilde {f} $ and it gives an average value of f taken over all positive values of $t$ such
+that the value $\widetilde{f}(s)$ represents an average of $f$ taken over all possible time intervals of length $s$ \parencite{laplace}.
+
+\begin{equation}
+\mathcal{L}[f(t)]= \widetilde{f} (s) = \int_{0}^{\infty} e^{-st} f(t)dt,  s >0 
+\end{equation}
+
+The idea behind the Laplacian transformation is simple. If the change in a pixel in the second derivative is steep enough, it is marked as an edge pixel. Deciding that is done by calculating the zero crossings and that is when the slope changes direction from positive to negative or vice versa. That point is then the edge's location. 
+
+Similar to the Hough transformation, the Laplacian transformation yielded insufficient results in detecting veins.
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{figures/compare8.JPG}
+\caption[Laplace transform, detection of edges]{Laplace transform, detection of edges}\label{fig:Compare8}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{figures/compare9.JPG}
+\caption[Laplace transform, failed detection of veins]{Laplace transform, failed detection of veins}\label{fig:Compare9}
+\end{figure}
 
 
 \section{Application Work Modes}
@@ -70,9 +120,9 @@ The result of venepuncture depending on images with such veins contrast will not
 \end{figure}
 
 \subsection{Adaptive Thresholding Mode}
-Because of poor vein contrast of raw NIR images in some cases, image processing can be of great benefit. Many image processing algorithms were tested in this work and they will be discussed in the last chapter. But only one approach was followed and used, the adaptive image thresholding.
+Because of poor vein contrast of raw NIR images in some cases, image processing can be of great benefit. Adaptive thresholding has given very good results in terms of performance and vein contrast.
 \subsubsection{Image Segmentation}
-Image segmentation is a fundamental process in many image, video, and computer vision applications. It is often used to partition an image into separate regions, which ideally correspond to different real-world objects\parencite{imageSeg}. It is the process of assigning a meaningful label to every set of pixels in the image so that these sets represent different segments. Like separating an object from the background or segmentation of multiple different objects in an image. Image segmentation is usually performed by identifying common properties between regions. Or, similarly, by identifying differences between them.
+Image segmentation is a fundamental process in many image, video, and computer vision applications. It is often used to partition an image into separate regions, which ideally correspond to different real-world objects \parencite{imageSeg}. It is the process of assigning a meaningful label to every set of pixels in the image so that these sets represent different segments. Like separating an object from the background or segmentation of multiple different objects in an image. Image segmentation is usually performed by identifying common properties between regions. Or, similarly, by identifying differences between them.
 
 \subsubsection{Image Thresholding}
 
@@ -108,23 +158,23 @@ Unlike global image thresholding, local image thresholding uses multiple, local,
 \subsubsection{Local Threshold Calculation by Mean}
 For each pixel at $(x; y)$, the threshold value $T(x; y)$ is the mean value of the neighbouring pixels of $(x; y)$ in an area of size $blockSize \times blockSize$ minus a correction constant $C$. 
 
-Increasement of $blockSize$ results in more neighbouring pixels taken into consideration while calculating the threshold value for each pixel. Determining the block size is deciding factor for the quality of the results. Luckily, the block size can be set based on visual assessments of the results and doesn’t need to be reconsidered for other images in the same setting. 
+Increasement of the block size results in more neighbouring pixels taken into consideration while calculating the threshold value for each pixel. Determining the block size is deciding factor for the quality of the results. Luckily, the block size can be set based on visual assessments of the results and doesn’t need to be reconsidered for other images in the same setting. 
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.8]{figures/compare1.JPG}
 \captionsetup{justification=centering}
-\caption[Effect of block size on mean adaptive thresholding]{Effect of block size on mean adaptive thresholding;\\C of both: 2; blocksize: left 7, right 41}\label{fig:compare1}
+\caption[Effect of block size on mean adaptive thresholding]{Effect of block size on mean adaptive thresholding;\\C of both: 2; block size: left 7, right 41}\label{fig:compare1}
 \end{figure}
 
-The correction constant is a constant value that is subtracted from each threshold. Increasing this constant reduces noise but, of course, might result into loss of some desired details. Normally, this constant is positive but it can be assigned a negative value as well.
+The correction constant is a constant value that is subtracted from each threshold. Increasing this constant reduces noise but, of course, might result into loss of some desired details. Normally, this constant is positive, but it can be assigned a negative value as well.
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.8]{figures/compare2.JPG}
-\captionsetup{justification=centering}
 
-\caption[Effect of correction constant on mean adaptive thresholding]{Effect of correction constant on mean adaptive thresholding;\\ blocksize for both: 91; C: left 0, right 2}\label{fig:compare2}
+
+\caption[Effect of correction constant on mean adaptive thresholding]{Effect of correction constant on mean adaptive thresholding; block size for both: 91; C: left 0, right 2; Partial loss of details is noticeable}\label{fig:compare2}
 \end{figure}
 
 \subsubsection{Local Threshold Calculation by Gaussian}
@@ -144,7 +194,7 @@ Similar to mean adaptive thresholding, block size and correction constant have i
 \centering
 \includegraphics[scale=0.8]{figures/compare3.JPG}
 \captionsetup{justification=centering}
-\caption[Effect of block size on Gaussian adaptive thresholding]{Effect of block size on Gaussian adaptive thresholding;\\C for both: 2; blocksize: left 7, right 41}\label{fig:compare3}
+\caption[Effect of block size on Gaussian adaptive thresholding]{Effect of block size on Gaussian adaptive thresholding;\\C for both: 2; block size: left 7, right 41}\label{fig:compare3}
 \end{figure}
 
 
@@ -153,11 +203,11 @@ Similar to mean adaptive thresholding, block size and correction constant have i
 \includegraphics[scale=0.8]{figures/compare4.JPG}
 \captionsetup{justification=centering}
 
-\caption[Effect of correction constant on Gaussian adaptive thresholding]{Effect of correction constant on Gaussian adaptive thresholding;\\ blocksize for both: 91; C: left 0, right 2}\label{fig:compare4}
+\caption[Effect of correction constant on Gaussian adaptive thresholding]{Effect of correction constant on Gaussian adaptive thresholding;\\ block size for both: 91; C: left 0, right 2}\label{fig:compare4}
 \end{figure}
 
 \subsubsection{Median Filter}
-In addition to the correction constant, image noise removing can be achieved by applying a filer after getting the adapt thresholding result. A good candidate here is the median filter. Similar to the adapt thresholding, median filter is a nonlinear image processing operation. The median filter is an effective method that can, distinguish out-of-range isolated noise from legitimate image features such as edges and lines. Noise reduction is done replacing each pixel with the median of all pixels in a defined size neighbourhood $w$ of the given pixel. 
+In addition to the correction constant, image noise removal can be achieved by applying a filer after getting the adapt thresholding result. A good candidate here is the median filter. Similar to the adapt thresholding, median filter is a nonlinear image processing operation. The median filter is an effective method that can, distinguish out-of-range isolated noise from legitimate image features such as edges and lines. Noise reduction is done replacing each pixel with the median of all pixels in a defined size neighbourhood $w$ of the given pixel. 
 
 \begin{equation}
 f(x; y) = median \{g(x; y) | (x; y)\in w   \}
@@ -167,13 +217,13 @@ f(x; y) = median \{g(x; y) | (x; y)\in w   \}
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.8]{figures/compare5.JPG}
-\captionsetup{justification=centering}
+ 
 
-\caption[Median filter]{Median filter; left: result of Gaussian adaptive threshodling with blocksize: 91, C: 2; right: result of applying median filter with kernel size: 4}\label{fig:compare5}
+\caption[Median filter]{Median filter; left: result of Gaussian adaptive thresholding with block size: 91, C: 2; right: result of applying median filter with kernel size: 4; Noise is reduced with no details loss}\label{fig:compare5}
 \end{figure}
 
 
-The median filter is better than the average filter, which calculates the average of pixels in the neighbourhood and replaces every pixel with it. Because in average filter, a single pixel with a very unrepresentative value can significantly affect the average value of all the pixels in its neighbourhood. 
+Moreover, the median filter is better than the average filter, which calculates the average of pixels in the neighbourhood and replaces every pixel with it. Because in average filter, a single pixel with a very unrepresentative value can significantly affect the average value of all the pixels in its neighbourhood. 
 
 
 \section{Application Structure}
@@ -195,18 +245,24 @@ The \autoref{fig:applicationArchitecture} below shows the application high-level
 \end{figure}
 \subsection{C++ Layer}
 
-
+Using native C++ has many benefits in terms of high performance and compatibility.
 C++ is a highly flexible and adaptable language. Since its creation, it has been used for a wide variety of programs including firmware for micro-controllers, operating systems, applications, and graphics programming \parencite{cpp}.
 
-Written in C++, this application layer encompasses the UVC driver library which allows the application to communicate with the camera as well as the native image processing module, the OpenCV module.
+Android offers a good and easy-to-use C++ Integration via the JNI. In fact, Android Studio (current version 3.2.1) offers an option to include C/C++ support when creating a new application. Native C++ classes as well as corresponding JNI methods and Java classes are automatically created. Even for an existing project, importing a native C++ library or adding C++ code can be done easily on Android Studio.
+
+One big advantage of using C++ is the cross-platform feature which the language offers. Code can be written on any environment and seamlessly run on other environment. During development, it was very inconvenient to run and test directly on a mobile device. Because of time loss in building the android application, packaging it and installing the APK file on the device. Instead, development, algorithms calibration and tests were performed directly on Linux using a desktop and the CLion IDE.
+
+Written in C++, this application layer encompasses the UVC Camera library which allows the application to communicate with the camera as well as the native image processing module, the OpenCV module.
+
+
 
 \subsubsection{USB Video Class}
 
-USB Video Class (UVC) describes the capabilities and characteristics of video streaming devices. It is widely used, such as desktop video cameras or webcams, digital camcorders, still-image cameras, and so forth. USB Video Class (UVC) is a standard class specification that standardizes video streaming functionality on the USB. It enables devices like webcams, digital camcorders, analog video converters, analog and digital television tuners etc to connect seamlessly with host machines. UVC supports streaming multiple video formats and provides structures for describing the functionalities of the video device to the host and defines USB requests to control different parameters of the device and characteristics of the video stream. It also provides flexibility for a video device to support multiple video resolutions, formats and frame rates, which highly influences the bandwidth negotiation between the device and the host \parencite{uvc}.
+USB Video Class (UVC) describes the capabilities and characteristics of video streaming devices. It is widely used, such as desktop video cameras or webcams, digital camcorders, still-image cameras, and so forth. USB Video Class (UVC) is a standard class specification that standardizes video streaming functionality on the USB. It enables devices like webcams, digital camcorders, analogue video converters, analogue and digital television tuners etc to connect seamlessly with host machines. UVC supports streaming multiple video formats and provides structures for describing the functionalities of the video device to the host and defines USB requests to control different parameters of the device and characteristics of the video stream. It also provides flexibility for a video device to support multiple video resolutions, formats and frame rates, which highly influences the bandwidth negotiation between the device and the host \parencite{uvc}.
 
 \subsubsection{UVC Camera Library for Android}
 Many OS platforms have native support for UVC drivers which greatly reduces the time required for developers to connect UVC devices. Unfortunately, android doesn’t offer such a support, therefore, to connect a UVC device such as a webcam, the device driver must be written by the developer. 
-Nevertheless, third-party and open source libraries offer good alternative solution for the UVC device drivers. An open source library to access to UVC webcams on non-rooted Android device called UVCCamera was used in this project \parencite{uvcCamera}. The library works on minimum android version 3.1 or later (API >= 12), but Android 4.0(API >= 14) or later is recommended.
+Nevertheless, third-party and open source libraries offer good alternative solution for the UVC device drivers. An open source library to access to UVC webcams on non-rooted Android device called UVCCamera was used in this project \parencite{uvcCamera}. The library works on minimum android version 3.1 or later (API >= 12), but Android 4.0(API >= 14) or later is recommended. Of course, to use it, many configurations and tuning steps were needed. Especially, due to the fact that no enough documentation is available.
 
 
 \subsubsection{Open Computer Vision Library}
@@ -215,23 +271,48 @@ OpenCV is written in C and C++ and runs under Linux, Windows and Mac OS X. OpenC
 OpenCV offers support for common image processing algorithms. Adaptive thresholding, for example, is implemented in this project using OpenCV. The video captured by the camera is a sequence of images. Each image can be represented as a matrix of numbers. Image processing algorithms tend to be quite computationally heavy, therefore, OpenCV has its own type to represent arrays, namely the $Mat$ class. $Mat$ can be used to store real or complex-valued vectors and matrices, grayscale or colour images and more. It is optimized to be passed to the functions without making unnecessary copies. Each $Mat$ object has a header, the matrix that holds the data may be shared between two instances of them by having their matrix pointers point to the same address. Moreover, the copy operators will only copy the headers and the pointer to the large matrix, not the data itself \parencite{openCv1}.
 
 
+\subsubsection{Android NDK}
+
+
+The Android NDK is a companion toolset for the Android Software Development Kit (SDK), designed to augment the Android SDK to allow implementation of performance-critical portions of android applications using machine code-generating programming languages like C, C++, and assembly \parencite{ndk} or to access physical device components, such as sensors and touch input. 
+The NDK builds the native shared libraries, or $.so$ files, from C/C++ source code as well as the native static libraries, or $.a$ files, which can be linked into other libraries.
+
+
 \subsection{Java Layer}
 
-
+The Java layer includes the user interface (UI) components and all application business logic.
 The compiled Java code along with any data and resource files required by the application is bundled by the android asset packaging tool (AAPT) tool into an android package, an archive file marked by an .apk suffix.
-The Java layer includes the user interface (UI) components and all application buisness logic.
+
+While the core functions in the UVC Camera library are written in C/C++, the library offers a Java interface and it has many modules written in Java. Therefore, here, the Java layer, additionally to the application itself, addresses some of the library parts that are written in Java and used in the application.
+
+
 
 \subsubsection{Permissions: USB Host}
-By default, Android does not allow an application to access the devices connected to the USB  port. To enable an application to interact with a the UVC camera directly connected by OTG cable, this functionality must be declared by adding the \texttt{<uses-feature android:name="android.hardware.usb.host"/>} tag in the manifest section in\texttt{AndroidManifest.xml}. 
+By default, Android does not allow an application to access the devices connected to the USB  port. To enable an application to interact with a the UVC camera directly connected by OTG cable, this functionality must be declared by adding the \texttt{<uses-feature android:name="android.hardware.usb.host"/>} tag in the manifest section in \texttt{ AndroidManifest.xml}. 
+
+\subsubsection{USBMonitor}
+
+This class manages the USB connection via the OTG port on the android device. It notifies the application when a USB device is attached, detached, connected or disconnected. Principally, the USB, and, therefore, the OTG, protocol allows connection of multiple peripherals. Of course, a USB hub is then needed. The USBMonitor class provides the application with a list of connected devices as well as each device’s vendor ID, product ID, device class and subclass, device protocol and more hardware-related information.
 
 \subsubsection{Permissions: Open GL}
 
-OpenGL ES (Open Graphics Library for Embedded Systems) is an API to graphics hardware. The API consists of a set of several hundred procedures and functions that allow a programmer to specify the shader programs, objects and operations involved in producing high-quality graphical images, specifically color images of three-dimensional objects\parencite{openGl}.
+OpenGL ES (Open Graphics Library for Embedded Systems) is an API to graphics hardware. The API consists of a set of several hundred procedures and functions that allow a programmer to specify the shader programs, objects and operations involved in producing high-quality graphical images, specifically color images of three-dimensional objects \parencite{openGl}.
+Android includes support for high performance 2D and 3D graphics with the OpenGL ES. Similar to USB host permission, adding  \texttt{<uses-feature android:glEsVersion="0x00030000"/>} tag to include OpenGL ES support is needed. This tells android to expect the version 3 of OpenGL ES.
+
+\subsubsection{ImageProcessor}
+
+The image processor class is part of the OpenCV Java-wrapper. It offers frame-based image processing capabilities using OpenCV. After configured and set up, whenever a frame arrives from the camera to the UVC Camera module, the corresponding activity calls the $doProcess$ method in the image processor class. The image processor Java class calls another C++ image processor class via the JNI. The later receives an image then by reference, processes it and sends it back to the Java side. After that, the Java image processor callback $onResult$ is called to return the processed frame to the activity. The fast succession of frames (about 30 fps) makes up the processed video.
 
 
-Android includes support for high performance 2D and 3D graphics with the OpenGL ES. Similar to USB host permission, adding  \texttt{<uses-feature android:glEsVersion="0x0\\0030000"/>} tag to include OpenGL ES support is needed. This tells android to expect the version 3 of OpenGL ES.
+\subsubsection{Android SurfaceView}
+After the frame has been processed in the image processor class, it is then sent back to the application to show it on the screen. Drawing on Android activities is performed by the same UI thread which is also used for all user interaction. Therefore, using this thread to draw the processed, or even raw, frames is not feasible and will cause the application to freeze. Instead, android offers another view type, the SurfaceView, which can be drawn on a background thread without affecting the user experience. Therefore, results are drawn on a SurfaceView. 
+However, SurfaceViews have some limitations. The main limitation is that they are not hardware accelerated, while most of operations on normal Views are hardware accelerated using OpenGL ES. Another limitation is that, SurfaceViews have dedicate surface buffer while all Views share one surface buffer. In another words, SurfaceViews cost more resources. Despite its limitations, practically, SurfaceView is sufficient for this project goals due to the small frame size and low resolution. 
 
 
+
+\subsubsection{Control of Algorithm Type and its Parameters}
+
+The application offers simple UI components to control the image processing algorithm type or its parameters. For example, as explained earlier, adaptive thresholding can be applied with or without the median filter. Selection of this option is done in the Java side through UI components and then sent to the C++ side via the JNI. Similarly, algorithm parameters can be changed the same way. A slider to adjust the kernel size of the median filter is shown on the screen. The kernel size is stored as a local variable in the C++ image processor class. During every image processing operation, i.e. on every frame, this variable is read and then used by the algorithm. When the user changes the slider’s value, the android activity calls a method in the Java image processor to change the kernel size, which in turn calls a corresponding method in the C++ image processor. Finally, the value is changed in that class and stored there. Java stores no information about the algorithm type or parameters and they are queried from the C++ side whenever they are needed. 
 
 
 
