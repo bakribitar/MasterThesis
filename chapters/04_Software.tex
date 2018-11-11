@@ -11,14 +11,14 @@ The main focus is to develop a low-cost mobile system to locate and examine vein
 The hardware extension is connected as a peripheral to an android device. In that sense, the android device takes over control of the hardware peripheral in somehow. This control can be described as power control and camera control.
 
 \subsubsection{Power Control}
-Only a single connection via OTG cable is needed. Data and power are then transferred using the data and power pins of the OTG connection respectively. Power is supplied whenever the OTG cable is plugged in. No programmable way for cutting off power was implemented. Because turning off the host port’s power needs write permission on the \texttt{/sys} directory and this cannot be acquired without root. The application is developed to be fully runnable on not rooted devices, so it requires no root access. For these reasons, controlling the OTG connection programmatically was out of the scope of this project. Of course, a physical switch can be also added on the whole circuit to turn the system on or off. 
+Only a single connection via OTG cable is needed. Data and power are then transferred using the data and power pins of the OTG connection respectively. Power is supplied whenever the OTG cable is plugged in. No programmable way for cutting off power was implemented. Because turning off the host port’s power needs write permission on the \texttt{/sys} directory and this cannot be acquired without root access. The application is developed to be fully runnable on not rooted devices (it works well on rooted ones as well), so it requires no root access. For these reasons, controlling the OTG connection programmatically was out of the scope of this project. Of course, a physical switch can be also added on the whole circuit to turn the system on or off. 
 
 \subsubsection{Camera Control}
 
 A third-party library, UVC Camera library, was used in this project to enable the android device to communicate with the webcam. UVC Camera supports variety of camera properties control like brightness, contrast, focus control and more, given that the camera itself supports those. Support is indicated by flags that the camera provides. Control of such properties can be done in the C++ side. Signals are sent from the module to the camera to change sensor values. For example, brightness and contrast control were added in the project. In this case, brightness and contrast are controlled by changing some sensor values, without the need of using image processing at all.
 
 
-As per the UVC specification, if the auto setting is supported and set to the on state, the device will provide automatic focus adjustment, and read requests will reflect the automatically set value \parencite{uvcCamera}. Attempts to programmatically set the Focus control are ignored when auto mode is set. When the UVC Camera library detects an autofocus support in a connected webcam, it uses it and sets the autofocus mode.
+As per the UVC specification, if the auto setting is supported and set to the on state, the device will provide automatic focus adjustment, and read requests will reflect the automatically set value \parencite{uvcCamera}. Attempts to programmatically set the focus control are ignored when auto mode is set. When the UVC Camera library detects an autofocus support in a connected webcam, it uses it and sets the autofocus mode.
 
 
 
@@ -48,7 +48,7 @@ In the following, we discuss some of image processing algorithms, which we tried
 
 \subsubsection{Image Processing: Hough Transformation}
 
-The Hough Transform is a method for finding lines in an image. In its classical form it was restricted to features that can be specified in a parametric form. However, a generalized version of the algorithm exists which can also be applied to features with no simple analytic form \parencite{hough}. Before applying Hough transform, an edge detector like Canny edge detector must be applied. Using Hough transform, lines in the image can be detected. The idea depends on the fact that after edge detection, only a few lines that pass through a given set of edge pixels exist. These common lines can be thought of as candidates for the actual line (if it exists) that passes through all of the nearby edge pixels. To find this common set of lines, a Hough transform to Hough space is performed. 
+The Hough Transform is a method for finding lines in an image. In its classical form, it was restricted to features that can be specified in a parametric form. However, a generalized version of the algorithm exists which can also be applied to features with no simple analytic form \parencite{hough}. Before applying Hough transform, an edge detector like Canny edge detector must be applied. Using Hough transform, lines in the image can be detected. The idea depends on the fact that after edge detection, only a few lines that pass through a given set of edge pixels exist. These common lines can be thought of as candidates for the actual line (if it exists) that passes through all of the nearby edge pixels. To find this common set of lines, a Hough transform to Hough space is performed. 
 
 To understand the Hough transform, it is important to know what the Hough space is. Each edge pixel in the original space is a line or curve in the Hough space. In Hough Space, each line represents a point from the original space, and each point represents a line from Image Space. The problem is now to solve for the intersections between lines in Hough space, and transform that intersection point back into the original space to obtain a line which intersects enough edge pixels. 
 Using Hough transform method has shown promising results on outer edge detection. However, practically and probably due to erroneous calibration of algorithm variables, line detection by Hough transformation using OpenCV yielded insufficient results.
@@ -57,20 +57,20 @@ Using Hough transform method has shown promising results on outer edge detection
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.7]{figures/compare6.JPG}
-\caption[Hough transform, detection of edges]{Hough transform, detection of edges}\label{fig:Compare6}
+\caption[Hough transform, detection of edges]{Hough transform, detection of edges.}\label{fig:Compare6}
 \end{figure}
 
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.7]{figures/compare7.JPG}
-\caption[Hough transform, failed detection of veins]{Hough transform, failed detection of veins}\label{fig:Compare7}
+\caption[Hough transform, failed detection of veins]{Hough transform, failed detection of veins.}\label{fig:Compare7}
 \end{figure}
 
 
 \subsubsection{Image Processing: Laplacian Transformation}
 The Laplacian of an image highlights regions of rapid intensity change and is therefore often used for edge detection. It can be considered as an equivalent measure of the second derivative in 2D.
-Given $f$, a function of time, with value $f(t)$ at time $t$, the Laplace transform of $f$ is denoted $\widetilde {f} $ and it gives an average value of f taken over all positive values of $t$ such
+Given $f$, a function of time, with value $f(t)$ at time $t$, the Laplacian transform of $f$ is denoted $\widetilde {f} $ and it gives an average value of f taken over all positive values of $t$ such
 that the value $\widetilde{f}(s)$ represents an average of $f$ taken over all possible time intervals of length $s$ \parencite{laplace}.
 
 \begin{equation}
@@ -86,13 +86,13 @@ Similar to the Hough transformation, the Laplacian transformation yielded insuff
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.7]{figures/compare8.JPG}
-\caption[Laplace transform, detection of edges]{Laplace transform, detection of edges}\label{fig:Compare8}
+\caption[Laplacian transform, detection of edges]{Laplacian transform, detection of edges.}\label{fig:Compare8}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.7]{figures/compare9.JPG}
-\caption[Laplace transform, failed detection of veins]{Laplace transform, failed detection of veins}\label{fig:Compare9}
+\caption[Laplacian transform, failed detection of veins]{Laplacian transform, failed detection of veins.}\label{fig:Compare9}
 \end{figure}
 
 
@@ -101,7 +101,7 @@ From software point of view, the application can work under two modes: raw NIR i
 
 \subsection{Raw NIR Images Mode}
 
-The term “raw NIR images” refers to the fact that no image processing operation was performed on the images before showing them on the screen. As stated in previous chapters, images from the adjusted webcam are sent to the mobile device via a third-party library, the UVC Camera library. As the camera is adjusted, it can sense almost only NIR light and no visible light. These raw images are not purely raw from hardware point of view, as they are already manipulated through the NIR-pass filter. They appear to be transformed in the greyscale. For normal healthy patients with relatively light skin colour, showing raw NIR images can provide good visualization of the veins pattern. \autoref{fig:RawNirImage} shows an NIR image of the arm of a normal healthy male person. No tourniquet was used while taking these images.
+The term “raw NIR images” refers to the fact that no image processing operation was performed on the images before showing them on the screen. As stated in previous chapters, images from the adjusted webcam are sent to the mobile device via a third-party library, the UVC Camera library. As the camera is adjusted, it can sense almost only NIR light and no visible light. These raw images are not purely raw from hardware point of view, as they are already manipulated through the NIR-Pass filter. They appear to be transformed in the greyscale. For normal healthy patients with relatively light skin colour, showing raw NIR images can provide good visualization of the veins pattern. \autoref{fig:RawNirImage} shows an NIR image of the arm of a normal healthy male person. No tourniquet was used while taking these images.
 
 
 \begin{figure}[H]
@@ -126,7 +126,7 @@ Image segmentation is a fundamental process in many image, video, and computer v
 
 \subsubsection{Image Thresholding}
 
-Image thresholding is the most common and simplest image processing approach to segment images. In general image thresholding aims to change pixel values depending on a threshold. For images in the greyscale, image thresholding yields binarized images, i.e. images that only has two colours. 
+Image thresholding is the most common and simplest image processing approach to segment images. In general, image thresholding aims to change pixel values depending on a threshold. For images in the greyscale, image thresholding yields binarized images, i.e. images that only has two colours. 
 
 Let $f(x; y)$ be the grey value of the image at pixel in position $(x; y)$; then thresholding using threshold value $t$ transforms this image into a binary image $f'(x; y)$ as follows:
 
@@ -142,13 +142,13 @@ Let $f(x; y)$ be the grey value of the image at pixel in position $(x; y)$; then
 All pixels below the threshold $t$ are turned into 0 and all others that are above this threshold are turned into 255. The threshold as well as the two assigned pixel values can be adjusted based on application specification.
 
 \subsubsection{Global Threshold}
-Global thresholding approach can be used if the intensity distribution between the segments is very distinct. In this method, only a single value (global value) for the threshold for all pixels in the image is used. Threshold value should be then carefully selected and based on practical results. However, any changes in the lightning conditions or colours of the image could affect the thresholding drastically and misclassify big regions in the image. Because the dependence is on the colour intensity only, not on any relationships between the pixels. These effects get worse as the noise increases, because it’s more likely that a pixel’s intensity doesn’t represent the normal intensity in the region. 
+Global thresholding approach can be used if the intensity distribution between the segments is very distinct. In this method, only a single value (global value) for the threshold for all pixels in the image is used. Threshold value should be then carefully selected and based on practical results. However, any changes in the lighting conditions or colours of the image could affect the thresholding drastically and misclassify big regions in the image. Because the dependence is on the colour intensity only, not on any relationships between the pixels. These effects get worse as the noise increases, because it’s more likely that a pixel’s intensity doesn’t represent the normal intensity in the region. 
 Applying global thresholding on the NIR images has given very bad results. \autoref{fig:thresholdGlobal} shows a global thresholding result on the image in \autoref{fig:RawNirImage} using threshold value of 160.
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{figures/thresholdGlobal.JPG}
-\caption[Global thresholding example]{Global thresholding on the image in \autoref{fig:RawNirImage}; threshold value: 160}\label{fig:thresholdGlobal}
+\caption[Global thresholding example]{Global thresholding on the image in \autoref{fig:RawNirImage}; threshold value: 160.}\label{fig:thresholdGlobal}
 \end{figure}
 
 \subsubsection{Local (Adaptive) Threshold}
@@ -158,13 +158,12 @@ Unlike global image thresholding, local image thresholding uses multiple, local,
 \subsubsection{Local Threshold Calculation by Mean}
 For each pixel at $(x; y)$, the threshold value $T(x; y)$ is the mean value of the neighbouring pixels of $(x; y)$ in an area of size $blockSize \times blockSize$ minus a correction constant $C$. 
 
-Increasement of the block size results in more neighbouring pixels taken into consideration while calculating the threshold value for each pixel. Determining the block size is deciding factor for the quality of the results. Luckily, the block size can be set based on visual assessments of the results and doesn’t need to be reconsidered for other images in the same setting. 
+Increasement of the block size results in more neighbouring pixels taken into consideration while calculating the threshold value for each pixel. Determining the block size is a deciding factor for the quality of the results. Luckily, the block size can be set based on visual assessments of the results and doesn’t need to be reconsidered for other images in the same setting. 
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.8]{figures/compare1.JPG}
-\captionsetup{justification=centering}
-\caption[Effect of block size on mean adaptive thresholding]{Effect of block size on mean adaptive thresholding;\\C of both: 2; block size: left 7, right 41}\label{fig:compare1}
+\caption[Effect of block size on mean adaptive thresholding]{Effect of block size on mean adaptive thresholding;\\C of both: 2; block size: left 7, right 41.}\label{fig:compare1}
 \end{figure}
 
 The correction constant is a constant value that is subtracted from each threshold. Increasing this constant reduces noise but, of course, might result into loss of some desired details. Normally, this constant is positive, but it can be assigned a negative value as well.
@@ -174,7 +173,7 @@ The correction constant is a constant value that is subtracted from each thresho
 \includegraphics[scale=0.8]{figures/compare2.JPG}
 
 
-\caption[Effect of correction constant on mean adaptive thresholding]{Effect of correction constant on mean adaptive thresholding; block size for both: 91; C: left 0, right 2; Partial loss of details is noticeable}\label{fig:compare2}
+\caption[Effect of correction constant on mean adaptive thresholding]{Effect of correction constant on mean adaptive thresholding; block size for both: 91; C: left 0, right 2; Partial loss of details is noticeable.}\label{fig:compare2}
 \end{figure}
 
 \subsubsection{Local Threshold Calculation by Gaussian}
@@ -193,21 +192,18 @@ Similar to mean adaptive thresholding, block size and correction constant have i
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.8]{figures/compare3.JPG}
-\captionsetup{justification=centering}
-\caption[Effect of block size on Gaussian adaptive thresholding]{Effect of block size on Gaussian adaptive thresholding;\\C for both: 2; block size: left 7, right 41}\label{fig:compare3}
+\caption[Effect of block size on Gaussian adaptive thresholding]{Effect of block size on Gaussian adaptive thresholding;C for both: 2; block size: left 7, right 41.}\label{fig:compare3}
 \end{figure}
 
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.8]{figures/compare4.JPG}
-\captionsetup{justification=centering}
-
-\caption[Effect of correction constant on Gaussian adaptive thresholding]{Effect of correction constant on Gaussian adaptive thresholding;\\ block size for both: 91; C: left 0, right 2}\label{fig:compare4}
+\caption[Effect of correction constant on Gaussian adaptive thresholding]{Effect of correction constant on Gaussian adaptive thresholding;\\ block size for both: 91; C: left 0, right 2.}\label{fig:compare4}
 \end{figure}
 
 \subsubsection{Median Filter}
-In addition to the correction constant, image noise removal can be achieved by applying a filer after getting the adapt thresholding result. A good candidate here is the median filter. Similar to the adapt thresholding, median filter is a nonlinear image processing operation. The median filter is an effective method that can, distinguish out-of-range isolated noise from legitimate image features such as edges and lines. Noise reduction is done replacing each pixel with the median of all pixels in a defined size neighbourhood $w$ of the given pixel. 
+In addition to the correction constant, image noise removal can be achieved by applying a filer after getting the adapt thresholding result. A good candidate here is the median filter. Similar to the adapt thresholding, median filter is a nonlinear image processing operation. The median filter is an effective method that can, distinguish out-of-range isolated noise from legitimate image features such as edges and lines. Noise reduction is done by replacing each pixel with the median of all pixels in a defined size neighbourhood $w$ of the given pixel. 
 
 \begin{equation}
 f(x; y) = median \{g(x; y) | (x; y)\in w   \}
@@ -219,7 +215,7 @@ f(x; y) = median \{g(x; y) | (x; y)\in w   \}
 \includegraphics[scale=0.8]{figures/compare5.JPG}
  
 
-\caption[Median filter]{Median filter; left: result of Gaussian adaptive thresholding with block size: 91, C: 2; right: result of applying median filter with kernel size: 4; Noise is reduced with no details loss}\label{fig:compare5}
+\caption[Median filter]{Median filter; left: result of Gaussian adaptive thresholding with block size: 91, C: 2; right: result of applying median filter with kernel size: 4; Noise is reduced with no details loss.}\label{fig:compare5}
 \end{figure}
 
 
@@ -231,7 +227,7 @@ The software application is basically an android application composed of two lay
 The Java layer includes user interface (UI) components of the application and all application business logic. 
 The C++ layer is responsible for communicating with the camera as well as for image processing of raw images coming from the camera using open computer vision library (OpenCV).
 
-Because compiled Java code runs on the Java virtual machine (JVM) which is a part of the Java runtime environment (JRE). Whereas compiled C++ runs directly on the operating system (OS), a bridging component Between the two layers is needed.
+Because compiled Java code runs on the Java virtual machine (JVM) which is a part of the Java runtime environment (JRE), whereas compiled C++ runs directly on the operating system (OS), a bridging component Between the two layers is needed.
 The Java native interface (JNI) allows the two layers to interact with each other. It is a Java feature that allows Java code to call native applications and libraries written in languages such as C, C++ and Objective-C.
 
 The \autoref{fig:applicationArchitecture} below shows the application high-level architecture.
@@ -241,7 +237,7 @@ The \autoref{fig:applicationArchitecture} below shows the application high-level
 \centering
 \includegraphics{figures/applicationArchitecture.JPG}
 
-\caption[Application architecture]{Application architecture}\label{fig:applicationArchitecture}
+\caption[Application architecture]{Application architecture.}\label{fig:applicationArchitecture}
 \end{figure}
 \subsection{C++ Layer}
 
@@ -262,7 +258,7 @@ USB Video Class (UVC) describes the capabilities and characteristics of video st
 
 \subsubsection{UVC Camera Library for Android}
 Many OS platforms have native support for UVC drivers which greatly reduces the time required for developers to connect UVC devices. Unfortunately, android doesn’t offer such a support, therefore, to connect a UVC device such as a webcam, the device driver must be written by the developer. 
-Nevertheless, third-party and open source libraries offer good alternative solution for the UVC device drivers. An open source library to access to UVC webcams on non-rooted Android device called UVCCamera was used in this project \parencite{uvcCamera}. The library works on minimum android version 3.1 or later (API >= 12), but Android 4.0(API >= 14) or later is recommended. Of course, to use it, many configurations and tuning steps were needed. Especially, due to the fact that no enough documentation is available.
+Nevertheless, third-party and open source libraries offer a good alternative solution for the UVC device drivers. An open source library to access UVC webcams on non-rooted Android devices called UVCCamera was used in this project \parencite{uvcCamera}. The library works on minimum android version 3.1 or later (API >= 12), but Android 4.0(API >= 14) or later is recommended. Of course, to use it, many configurations and tuning steps were needed. Especially, due to the fact that no enough documentation is available.
 
 
 \subsubsection{Open Computer Vision Library}
